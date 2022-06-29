@@ -70,6 +70,6 @@ export const Project = defineDocumentType(() => ({
 }));
 
 export default makeSource({
-  contentDirPath: "./src/projects",
+  contentDirPath: "./src/projects_markdown",
   documentTypes: [Project],
 });

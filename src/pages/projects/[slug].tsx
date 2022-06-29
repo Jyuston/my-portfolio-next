@@ -5,7 +5,7 @@ import { allProjects, Project } from "contentlayer/generated";
 import { GetStaticPaths, GetStaticProps, NextPage } from "next";
 
 type Props = {
-  project: Project | undefined;
+  project: Project;
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
@@ -22,6 +22,11 @@ export const getStaticProps: GetStaticProps<Props> = ({ params }) => {
   const project = allProjects.find(
     (project) => project._raw.flattenedPath === params!.slug
   );
+
+  if (!project) {
+    return { notFound: true };
+  }
+
   return {
     props: {
       project,
@@ -33,7 +38,7 @@ const ProjectPage: NextPage<Props> = ({ project }) => {
   return (
     <>
       <Head>
-        <title>{project!.title}</title>
+        <title>{project.title}</title>
       </Head>
       <article className="mx-auto max-w-2xl py-16">
         <div className="mb-6 text-center">
@@ -44,15 +49,15 @@ const ProjectPage: NextPage<Props> = ({ project }) => {
           </Link>
         </div>
         <div className="mb-6 text-center">
-          <h1 className="mb-1 text-3xl font-bold">{project!.title}</h1>
-          <time dateTime={project!.date} className="text-sm text-slate-600">
-            {format(parseISO(project!.date), "LLLL d, yyyy")}
+          <h1 className="mb-1 text-3xl font-bold">{project.title}</h1>
+          <time dateTime={project.date} className="text-sm text-slate-600">
+            {format(parseISO(project.date), "LLLL d, yyyy")}
           </time>
+          <div
+            className="prose lg:prose-xl"
+            dangerouslySetInnerHTML={{ __html: project.body.html }}
+          />
         </div>
-        <div
-          className="cl-post-body"
-          dangerouslySetInnerHTML={{ __html: project!.body.html }}
-        />
       </article>
     </>
   );
