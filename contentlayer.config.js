@@ -64,12 +64,12 @@ export const Project = defineDocumentType(() => ({
   computedFields: {
     url: {
       type: "string",
-      resolve: (project) => `/posts/${project._raw.flattenedPath}`,
+      resolve: (project) => `/projects/${project._raw.flattenedPath}`,
     },
   },
 }));
 
 export default makeSource({
-  contentDirPath: "projects",
+  contentDirPath: "./src/projects",
   documentTypes: [Project],
 });
