@@ -7,7 +7,7 @@ import {
 const Tag = defineNestedType(() => ({
   name: "Tag",
   fields: {
-    title: {
+    name: {
       type: "string",
       required: true,
     },
@@ -17,7 +17,7 @@ const Tag = defineNestedType(() => ({
 const Link = defineNestedType(() => ({
   name: "Link",
   fields: {
-    title: {
+    name: {
       type: "string",
       required: true,
     },

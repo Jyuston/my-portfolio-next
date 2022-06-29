@@ -4,12 +4,12 @@ date: 2021-12-24
 description: This is a brief description about my project.
 coverImage: image.png
 tags:
-  - tag1
-  - tag2
-  - tag3
+  - name: tag1
+  - name: tag2
+  - name: tag3
 links:
-  - link1.com
-  - link2.com
+  - name: link1.com
+  - name: link2.com
 ---
 
 Ullamco et nostrud magna commodo nostrud occaecat quis pariatur id ipsum. Ipsum
