@@ -1,6 +1,7 @@
 import {
   defineDocumentType,
   defineNestedType,
+  makeSource,
 } from "contentlayer/source-files";
 
 const Tag = defineNestedType(() => ({
@@ -60,4 +61,15 @@ export const Project = defineDocumentType(() => ({
       required: true,
     },
   },
+  computedFields: {
+    url: {
+      type: "string",
+      resolve: (project) => `/posts/${project._raw.flattenedPath}`,
+    },
+  },
 }));
+
+export default makeSource({
+  contentDirPath: "projects",
+  documentTypes: [Project],
+});
