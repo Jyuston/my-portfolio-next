@@ -9,7 +9,7 @@ const ProjectCard: React.FC<Project> = (project) => (
     </time>
 
     <div className="flex flex-col items-center">
-      <h2 className="text-lg">
+      <h2 className="text-md">
         <Link href={project.url}>
           <a className="text-blue-700 hover:text-blue-900">{project.title}</a>
         </Link>

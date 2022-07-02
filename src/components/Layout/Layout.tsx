@@ -1,3 +1,6 @@
+import Footer from "./Footer";
+import Header from "./Header";
+
 type LayoutProps = {
   children: React.ReactNode;
 };
@@ -5,9 +8,9 @@ type LayoutProps = {
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <div className="flex flex-col items-center">
-      <h1>Header</h1>
+      <Header />
       {children}
-      <h2>Footer</h2>
+      <Footer />
     </div>
   );
 };

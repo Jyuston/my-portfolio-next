@@ -17,7 +17,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
 };
 
 const Home: NextPage<Props> = ({ projects }) => (
-  <div className="mx-auto max-w-2xl py-16 text-center">
+  <div className="text-center">
     <Head>
       <title>Justin Yuen - Portfolio</title>
     </Head>
