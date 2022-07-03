@@ -7,9 +7,11 @@ type LayoutProps = {
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col h-screen">
       <Header />
-      <div className="bg-slate-300 w-full">{children}</div>
+      <div className="bg-slate-300 grow">
+        <div className="container">{children}</div>
+      </div>
       <Footer />
     </div>
   );

@@ -17,20 +17,20 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
 };
 
 const Home: NextPage<Props> = ({ projects }) => (
-  <div className="flex justify-around">
+  <>
     <Head>
       <title>Justin Yuen - Portfolio</title>
     </Head>
     <div>
       <p>Home - Projects</p>
       <p>Hey my name is justin.</p>
-      <div className="flex flex-row gap-5">
+      <div className="grid grid-cols-2 gap-5">
         {projects.map((project, idx) => (
           <ProjectCard key={idx} {...project} />
         ))}
       </div>
     </div>
-  </div>
+  </>
 );
 
 export default Home;

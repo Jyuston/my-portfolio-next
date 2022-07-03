@@ -14,13 +14,13 @@ const Header: React.FC = () => {
 
   return (
     <div className="flex w-screen bg-slate-200 justify-center">
-      <div className="w-1/2 flex justify-around items-center">
-        <div className="font-bold text-emerald-800/75 text-2xl p-5">
-          Jyuston
+      <div className="flex items-center justify-between container">
+        <div className="font-bold text-indigo-500/80 text-2xl p-5">Jyuston</div>
+        <div className="flex flex-row gap-4">
+          <MenuButton url="/">Home</MenuButton>
+          <MenuButton url="/about">About</MenuButton>
+          <MenuDropdown dropdownItems={dropdownItems}>Projects</MenuDropdown>
         </div>
-        <MenuButton url="/">Home</MenuButton>
-        <MenuButton url="/about">About</MenuButton>
-        <MenuDropdown dropdownItems={dropdownItems}>Projects</MenuDropdown>
       </div>
     </div>
   );

@@ -48,26 +48,28 @@ const MenuDropdown: React.FC<MenuDropdownProps> = ({
             leaveFrom="opacity-100 translate-y-0"
             leaveTo="opacity-0 translate-y-1"
           >
-            <Popover.Panel className="absolute z-10 left-1/2 transform -translate-x-1/2 mt-4 px-2 w-screen max-w-xs sm:px-0">
-              <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
-                <div className="relative grid gap-3 bg-white px-5 py-6 sm:gap-8 sm:p-4">
-                  {dropdownItems.map((item) => (
-                    <Popover.Button as={Link} href={item.url}>
-                      <a
-                        key={item.title}
-                        className="-m-3 p-3 block rounded-md hover:bg-gray-200 transition ease-in-out duration-150"
-                      >
-                        <p className="text-base font-medium text-gray-900">
-                          {item.title}
-                        </p>
-                        <p className="mt-1 text-sm text-gray-500">
-                          {item.description}
-                        </p>
-                      </a>
-                    </Popover.Button>
-                  ))}
+            <Popover.Panel className="absolute z-10 right-0 mt-2 px-2 sm:px-0 w-screen max-w-xs">
+              {({ close }) => (
+                <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden ">
+                  <div className="relative grid gap-3 bg-white px-5 py-6 sm:gap-8 sm:p-4">
+                    {dropdownItems.map((item) => (
+                      <Link href={item.url} key={item.title}>
+                        <a
+                          className="-m-3 p-3 block rounded-md hover:bg-gray-200 transition ease-in-out duration-150"
+                          onClick={() => close()}
+                        >
+                          <p className="text-base font-medium text-gray-900">
+                            {item.title}
+                          </p>
+                          <p className="mt-1 text-sm text-gray-500">
+                            {item.description}
+                          </p>
+                        </a>
+                      </Link>
+                    ))}
+                  </div>
                 </div>
-              </div>
+              )}
             </Popover.Panel>
           </Transition>
         </>
