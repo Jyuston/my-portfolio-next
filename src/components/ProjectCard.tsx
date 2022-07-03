@@ -8,29 +8,24 @@ const ProjectCard: React.FC<Project> = ({
   url,
   description,
   tags,
-  links,
   date,
   coverImage,
 }) => (
   <Link href={url}>
-    <div className="flex flex-col items-start border-2 border-gray-750 rounded-md hover:cursor-pointer p-3">
-      <div className="flex">
-        <div className="flex flex-col items-start">
-          <h2 className="text-md">
-            <a>{title}</a>
-          </h2>
-          <time dateTime={date} className="block text-xs text-slate-600">
-            {format(parseISO(date), "LLLL, yyyy")}
-          </time>
-          <div className="flex flex-row">
-            {tags.map((tag) => (
-              <Tag key={tag._id} tag={tag} />
-            ))}
-          </div>
+    <div className="flex flex-col items-start border-2 bg-slate-50 rounded-md hover:cursor-pointer p-4">
+      <div className="flex flex-col items-start w-full">
+        <h2 className="text-md font-medium text-lg">{title}</h2>
+        <time dateTime={date} className="block text-xs text-slate-600 pb-2">
+          {format(parseISO(date), "LLLL, yyyy")}
+        </time>
+        <div className="flex flex-row gap-2 my-2">
+          {tags.map((tag) => (
+            <Tag key={tag._id} tag={tag} />
+          ))}
         </div>
       </div>
 
-      <h2>{description}</h2>
+      <h2 className="my-4">{description}</h2>
     </div>
   </Link>
 );
