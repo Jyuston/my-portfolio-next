@@ -1,5 +1,5 @@
 ---
-title: Lorem Ipsum
+title: IoT Bay
 date: 2021-12-24
 description: This is a brief description about my project.
 coverImage: image.png

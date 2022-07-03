@@ -1,29 +1,38 @@
 import Link from "next/link";
 import { format, parseISO } from "date-fns";
 import { Project } from "contentlayer/generated";
+import Tag from "./Tag";
 
-const ProjectCard: React.FC<Project> = (project) => (
-  <div className="mb-6">
-    <time dateTime={project.date} className="block text-sm text-slate-600">
-      {format(parseISO(project.date), "LLLL d, yyyy")}
-    </time>
-
-    <div className="flex flex-col items-center">
-      <h2 className="text-md">
-        <Link href={project.url}>
-          <a className="text-blue-700 hover:text-blue-900">{project.title}</a>
-        </Link>
-      </h2>
-
-      <div className="flex flex-row">
-        {project.tags.map((tag) => (
-          <span className="inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium bg-green-100 text-green-800">
-            {tag.name}
-          </span>
-        ))}
+const ProjectCard: React.FC<Project> = ({
+  title,
+  url,
+  description,
+  tags,
+  links,
+  date,
+  coverImage,
+}) => (
+  <Link href={url}>
+    <div className="flex flex-col items-start border-2 border-gray-750 rounded-md hover:cursor-pointer p-3">
+      <div className="flex">
+        <div className="flex flex-col items-start">
+          <h2 className="text-md">
+            <a>{title}</a>
+          </h2>
+          <time dateTime={date} className="block text-xs text-slate-600">
+            {format(parseISO(date), "LLLL, yyyy")}
+          </time>
+          <div className="flex flex-row">
+            {tags.map((tag) => (
+              <Tag key={tag._id} tag={tag} />
+            ))}
+          </div>
+        </div>
       </div>
+
+      <h2>{description}</h2>
     </div>
-  </div>
+  </Link>
 );
 
 export default ProjectCard;

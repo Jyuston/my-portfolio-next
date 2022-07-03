@@ -22,7 +22,7 @@ const Home: NextPage<Props> = ({ projects }) => (
       <title>Justin Yuen - Portfolio</title>
     </Head>
 
-    <h1 className="mb-8 text-3xl font-bold">Welcome Home</h1>
+    <h1 className="">Welcome Home</h1>
 
     {projects.map((project, idx) => (
       <ProjectCard key={idx} {...project} />
