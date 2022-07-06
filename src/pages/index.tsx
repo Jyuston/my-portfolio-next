@@ -21,9 +21,19 @@ const Home: NextPage<Props> = ({ projects }) => (
     <Head>
       <title>Justin Yuen - Portfolio</title>
     </Head>
-    <div>
-      <p>Home - Projects</p>
-      <p>Hey my name is justin.</p>
+    <div className="mx-32 my-16">
+      <div>
+        <h1 className="text-4xl font-medium">Welcome. 🙋‍♂️</h1>
+        <h2 className="text-2xl font-medium">
+          My name is Justin Yuen. A University Graduate from Sydney, Australia.
+        </h2>
+        <h2 className="text-2xl font-medium">
+          I have a passion for web applications / devops / software development
+        </h2>
+        <h2 className="text-2xl font-medium">
+          Feel free to look around and learn about me!
+        </h2>
+      </div>
       <div className="grid grid-cols-2 gap-5">
         {projects.map((project, idx) => (
           <ProjectCard key={idx} {...project} />

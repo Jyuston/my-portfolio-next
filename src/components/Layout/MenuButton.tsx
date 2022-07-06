@@ -7,7 +7,7 @@ type MenuButtonProps = {
 const MenuButton: React.FC<MenuButtonProps> = ({ url, children }) => {
   return (
     <Link href={url}>
-      <a className="group rounded-sm inline-flex items-center text-base font-medium p-2 text-gray-500 hover:text-gray-600 ">
+      <a className="group inline-flex items-center rounded-sm p-2 text-base font-medium text-gray-500 hover:text-gray-600 ">
         {children}
       </a>
     </Link>
