@@ -13,9 +13,11 @@ const Header: React.FC = () => {
   );
 
   return (
-    <div className="flex w-screen bg-slate-200 justify-center">
-      <div className="flex items-center justify-between container">
-        <div className="font-bold text-indigo-500/80 text-2xl p-5">Jyuston</div>
+    <div className="flex w-screen justify-center bg-slate-200">
+      <div className="container flex items-center justify-between">
+        <div className=" p-5 text-2xl font-bold text-gray-500 transition delay-100 duration-100 ease-in-out hover:scale-110 hover:text-indigo-400">
+          Jyuston
+        </div>
         <div className="flex flex-row gap-4">
           <MenuButton url="/">Home</MenuButton>
           <MenuButton url="/about">About</MenuButton>

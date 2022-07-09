@@ -26,7 +26,7 @@ const MenuDropdown: React.FC<MenuDropdownProps> = ({
           <Popover.Button
             className={classNames(
               open ? "text-gray-900" : "text-gray-500",
-              "group rounded-sm inline-flex items-center text-base font-medium p-2 hover:text-gray-600 focus:outline-none  focus:ring-gray-400"
+              "group inline-flex items-center rounded-sm p-2 text-base font-medium hover:text-gray-600 focus:outline-none  focus:ring-gray-400"
             )}
           >
             <span>{children}</span>
@@ -48,14 +48,14 @@ const MenuDropdown: React.FC<MenuDropdownProps> = ({
             leaveFrom="opacity-100 translate-y-0"
             leaveTo="opacity-0 translate-y-1"
           >
-            <Popover.Panel className="absolute z-10 right-0 mt-2 px-2 sm:px-0 w-screen max-w-xs">
+            <Popover.Panel className="absolute right-0 z-10 mt-2 w-screen max-w-xs px-2 sm:px-0">
               {({ close }) => (
-                <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden ">
+                <div className="overflow-hidden rounded-md shadow-lg ring-1 ring-black ring-opacity-5 ">
                   <div className="relative grid gap-3 bg-white px-5 py-6 sm:gap-8 sm:p-4">
                     {dropdownItems.map((item) => (
                       <Link href={item.url} key={item.title}>
                         <a
-                          className="-m-3 p-3 block rounded-md hover:bg-gray-200 transition ease-in-out duration-150"
+                          className="-m-3 block rounded-md p-3 transition duration-150 ease-in-out hover:bg-gray-200"
                           onClick={() => close()}
                         >
                           <p className="text-base font-medium text-gray-900">
