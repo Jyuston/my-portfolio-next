@@ -1,10 +1,9 @@
 ---
-title: AIP Assignment Changed
+title: CSR Connect
 date: 2021-08-12
 description: QA and Release Management of CSR Connect.
 coverImage: image2.png
 tags:
-  - name: React
   - name: Angular
   - name: .NET
   - name: AWS

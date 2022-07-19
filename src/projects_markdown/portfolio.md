@@ -1,12 +1,13 @@
 ---
-title: Lorem Ipsum 2
+title: Porfolio Website
 date: 2021-12-24
-description: This is a brief description about my project 2.
+description: A personal portfolio for all of my work.
 coverImage: image2.png
 tags:
-  - name: tag4
-  - name: tag5
-  - name: tag6
+  - name: NextJS
+  - name: Content Layer
+  - name: HeadlessUI
+  - name: Tailwind CSS
 links:
   - name: link3.com
   - name: link4.com

@@ -25,7 +25,7 @@ const MenuDropdown: React.FC<MenuDropdownProps> = ({
         <>
           <Popover.Button
             className={classNames(
-              open ? "text-gray-900" : "text-gray-500",
+              open ? "text-gray-600" : "text-gray-500",
               "group inline-flex items-center rounded-sm p-2 text-base font-medium hover:text-gray-600 focus:outline-none  focus:ring-gray-400"
             )}
           >
@@ -33,7 +33,7 @@ const MenuDropdown: React.FC<MenuDropdownProps> = ({
             <ChevronDownIcon
               className={classNames(
                 open ? "text-gray-600" : "text-gray-400",
-                "ml-2 h-5 w-5 group-hover:text-gray-500"
+                "h-5 w-5 group-hover:text-gray-500 "
               )}
               aria-hidden="true"
             />
@@ -55,7 +55,7 @@ const MenuDropdown: React.FC<MenuDropdownProps> = ({
                     {dropdownItems.map((item) => (
                       <Link href={item.url} key={item.title}>
                         <a
-                          className="-m-3 block rounded-md p-3 transition duration-150 ease-in-out hover:bg-gray-200"
+                          className="-m-3 block rounded-md p-3 transition duration-150 ease-in-out hover:bg-indigo-100"
                           onClick={() => close()}
                         >
                           <p className="text-base font-medium text-gray-900">
