@@ -6,6 +6,8 @@ import { GetStaticPaths, GetStaticProps, NextPage } from "next";
 import { Transition } from "@headlessui/react";
 import Image from "next/image";
 import kayne from "../../../public/kanyee.png";
+import Carousel from "src/components/Carousel/Carousel";
+import CarouselItem from "src/components/Carousel/CarouselItem";
 
 type Props = {
   project: Project;
@@ -46,11 +48,9 @@ const ProjectPage: NextPage<Props> = ({ project }) => {
       </Head>
 
       <Link href="/">
-        <div className="mb-4 ml-2 flex flex-row align-middle">
-          <a className="text-md font-bold uppercase text-gray-500 hover:cursor-pointer hover:text-gray-700">
-            Home
-          </a>
-        </div>
+        <a className="text-md font-bold uppercase text-gray-500 hover:cursor-pointer hover:text-gray-700">
+          Home
+        </a>
       </Link>
 
       <Transition
@@ -60,7 +60,7 @@ const ProjectPage: NextPage<Props> = ({ project }) => {
         enterFrom="translate-y-5 opacity-0"
         enterTo="opacity-100"
       >
-        <div className="flex gap-3 rounded-lg bg-slate-50/80 p-5 text-start marker:mb-6">
+        <div className="flex flex-col gap-3 rounded-lg bg-slate-50/80 p-5 text-start marker:mb-6">
           <article>
             <div className="mb-4">
               <h1 className="mb-2 text-3xl font-bold">{project.title}</h1>
@@ -75,7 +75,11 @@ const ProjectPage: NextPage<Props> = ({ project }) => {
             />
           </article>
 
-          <Image src={kayne} placeholder="blur" />
+          <Carousel>
+            <CarouselItem className="bg-yellow-300">Hey1</CarouselItem>
+            <CarouselItem className="bg-red-300">Hey2</CarouselItem>
+            <CarouselItem className="bg-blue-300">Hey3</CarouselItem>
+          </Carousel>
         </div>
       </Transition>
     </div>
