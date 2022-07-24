@@ -11,7 +11,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       <Header />
 
       <main className="flex grow justify-center bg-slate-300">
-        <div className="container">{children}</div>
+        <div className="container px-5">{children}</div>
       </main>
       <Footer />
     </div>

@@ -42,7 +42,7 @@ export const getStaticProps: GetStaticProps<Props> = ({ params }) => {
 
 const ProjectPage: NextPage<Props> = ({ project }) => {
   return (
-    <div className="mx-48 py-16">
+    <div className="flex flex-col items-center justify-center gap-4 py-12">
       <Head>
         <title>Justin Yuen - {project.title}</title>
       </Head>
@@ -60,7 +60,7 @@ const ProjectPage: NextPage<Props> = ({ project }) => {
         enterFrom="translate-y-5 opacity-0"
         enterTo="opacity-100"
       >
-        <div className="flex flex-col gap-3 rounded-lg bg-slate-50/80 p-5 text-start marker:mb-6">
+        <div className="flex flex-col gap-3 rounded-lg bg-slate-50/80 p-8 text-start marker:mb-6 md:px-8">
           <article>
             <div className="mb-4">
               <h1 className="mb-2 text-3xl font-bold">{project.title}</h1>
@@ -76,12 +76,20 @@ const ProjectPage: NextPage<Props> = ({ project }) => {
           </article>
 
           <Carousel>
-            <CarouselItem className="bg-yellow-300">Hey1</CarouselItem>
-            <CarouselItem className="bg-red-300">Hey2</CarouselItem>
-            <CarouselItem className="bg-blue-300">Hey3</CarouselItem>
+            <CarouselItem id="1" className="bg-yellow-300">
+              Hey1
+            </CarouselItem>
+            <CarouselItem id="2" className="bg-red-300">
+              Hey2
+            </CarouselItem>
+            <CarouselItem id="3" className="bg-blue-300">
+              Hey3
+            </CarouselItem>
           </Carousel>
         </div>
       </Transition>
+
+      {/* Little Menu of all Projects in tablets to pick from each slug route */}
     </div>
   );
 };

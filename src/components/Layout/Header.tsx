@@ -14,15 +14,15 @@ const Header: React.FC = () => {
   );
 
   return (
-    <div className="flex w-screen justify-center bg-slate-200  selection:bg-indigo-500 selection:text-white">
-      <div className="container flex items-center justify-between">
+    <div className="bg-slate-200  selection:bg-indigo-500 selection:text-white">
+      <div className="container flex flex-col items-center justify-between px-4 md:flex-row">
         <Link href="/">
-          <a className=" p-5 text-2xl font-bold text-gray-400 transition delay-100 duration-100 ease-in-out hover:scale-110 hover:text-indigo-400">
+          <a className="py-5 text-2xl font-bold text-gray-400 transition delay-100 duration-300 ease-in-out hover:scale-110 hover:text-indigo-400">
             Justin Y.
           </a>
         </Link>
 
-        <div className="flex flex-row gap-4">
+        <div className="flex flex-row gap-4 py-4">
           <MenuButton url="/">Home</MenuButton>
           <MenuButton url="/about">About</MenuButton>
           <MenuDropdown dropdownItems={dropdownItems}>Projects</MenuDropdown>

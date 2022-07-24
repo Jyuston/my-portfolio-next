@@ -25,7 +25,7 @@ const Home: NextPage<Props> = ({ projects }) => {
       <Head>
         <title>Justin Yuen - Home</title>
       </Head>
-      <div className="mx-32 my-16 selection:bg-indigo-500 selection:text-white">
+      <div className="my-12 selection:bg-indigo-500 selection:text-white md:mx-8">
         <div>
           <h1 className="my-5 text-4xl font-medium text-slate-700">
             Welcome 🤗
@@ -44,7 +44,7 @@ const Home: NextPage<Props> = ({ projects }) => {
             from Sydney, Australia.
           </h3>
 
-          <div className="mb-7 flex justify-start rounded-md">
+          <div className="mb-7 inline-flex flex-col justify-start gap-4 rounded-md 2xl:flex-row">
             <GithubIcon />
             <LinkedInIcon />
           </div>
@@ -61,7 +61,7 @@ const Home: NextPage<Props> = ({ projects }) => {
           enterFrom="translate-y-5 opacity-0"
           enterTo="opacity-100"
         >
-          <div className="mb-7 grid gap-5 pt-4 lg:max-h-fit lg:grid-cols-1 2xl:grid-cols-2">
+          <div className="mb-7 grid gap-5 pt-4 xl:grid-cols-2">
             {projects.map((project, idx) => (
               <ProjectCard key={idx} {...project} />
             ))}
