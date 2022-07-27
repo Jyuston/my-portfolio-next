@@ -4,12 +4,12 @@ import { format, parseISO } from "date-fns";
 import { allProjects, Project } from "contentlayer/generated";
 import { GetStaticPaths, GetStaticProps, NextPage } from "next";
 import { Transition } from "@headlessui/react";
-import Image from "next/image";
-import kayne from "../../../public/kanyee.png";
 import Carousel from "src/components/Carousel/Carousel";
 import CarouselItem from "src/components/Carousel/CarouselItem";
+import classNames from "src/utils/classNames";
+import { ChevronRightIcon } from "@heroicons/react/solid";
 
-type Props = {
+type ProjectPageProps = {
   project: Project;
 };
 
@@ -23,7 +23,9 @@ export const getStaticPaths: GetStaticPaths = async () => {
   };
 };
 
-export const getStaticProps: GetStaticProps<Props> = ({ params }) => {
+export const getStaticProps: GetStaticProps<ProjectPageProps> = ({
+  params,
+}) => {
   const project = allProjects.find(
     (project) => project._raw.flattenedPath === params!.slug
   );
@@ -40,9 +42,9 @@ export const getStaticProps: GetStaticProps<Props> = ({ params }) => {
   };
 };
 
-const ProjectPage: NextPage<Props> = ({ project }) => {
+const ProjectPage: NextPage<ProjectPageProps> = ({ project }) => {
   return (
-    <div className="flex flex-col items-center justify-center gap-4 py-12">
+    <div className="relative flex flex-col justify-center gap-4 py-12">
       <Head>
         <title>Justin Yuen - {project.title}</title>
       </Head>
@@ -60,7 +62,7 @@ const ProjectPage: NextPage<Props> = ({ project }) => {
         enterFrom="translate-y-5 opacity-0"
         enterTo="opacity-100"
       >
-        <div className="flex flex-col gap-3 rounded-lg bg-slate-50/80 p-8 text-start marker:mb-6 md:px-8">
+        <div className="flex w-3/4 flex-col gap-3 rounded-lg bg-slate-50/80 p-8 text-start marker:mb-6 md:px-8">
           <article>
             <div className="mb-4">
               <h1 className="mb-2 text-3xl font-bold">{project.title}</h1>
@@ -74,23 +76,49 @@ const ProjectPage: NextPage<Props> = ({ project }) => {
               dangerouslySetInnerHTML={{ __html: project.body.html }}
             />
           </article>
-
-          <Carousel>
-            <CarouselItem id="1" className="bg-yellow-300">
-              Hey1
-            </CarouselItem>
-            <CarouselItem id="2" className="bg-red-300">
-              Hey2
-            </CarouselItem>
-            <CarouselItem id="3" className="bg-blue-300">
-              Hey3
-            </CarouselItem>
-          </Carousel>
         </div>
       </Transition>
 
+      <ProjectSelector selectedProject={project}></ProjectSelector>
+
       {/* Little Menu of all Projects in tablets to pick from each slug route */}
     </div>
+  );
+};
+
+type ProjectSelectorProps = {
+  selectedProject: Project;
+};
+
+const ProjectSelector: React.FC<ProjectSelectorProps> = ({
+  selectedProject,
+}) => {
+  return (
+    <nav
+      aria-label="Sidebar"
+      className=" top-2/5 absolute right-2 hidden flex-col  border-l-2 border-cyan-700 px-2 text-center 2xl:flex"
+    >
+      {allProjects.map((project) => {
+        return (
+          <Link href={project.url}>
+            <a
+              key={project._id}
+              className={classNames(
+                project._id === selectedProject._id
+                  ? " text-cyan-700"
+                  : "text-gray-600 hover:text-cyan-700",
+                "flex items-center rounded-md px-3 py-2 text-lg font-medium"
+              )}
+            >
+              {project._id === selectedProject._id && (
+                <ChevronRightIcon className="h-5 w-5" />
+              )}
+              <span className="truncate">{project.title}</span>
+            </a>
+          </Link>
+        );
+      })}
+    </nav>
   );
 };
 
