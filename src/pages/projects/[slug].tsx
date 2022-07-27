@@ -44,9 +44,9 @@ export const getStaticProps: GetStaticProps<ProjectPageProps> = ({
 
 const ProjectPage: NextPage<ProjectPageProps> = ({ project }) => {
   return (
-    <div className="relative flex flex-col justify-center gap-4 py-12">
+    <div className=" flex flex-col justify-center gap-4 py-12">
       <Head>
-        <title>Justin Yuen - {project.title}</title>
+        <title>Justin Yuen - Projects</title>
       </Head>
 
       <Link href="/">
@@ -94,13 +94,13 @@ const ProjectSelector: React.FC<ProjectSelectorProps> = ({
   selectedProject,
 }) => {
   return (
-    <nav
+    <div
       aria-label="Sidebar"
-      className=" top-2/5 absolute right-2 hidden flex-col  border-l-2 border-cyan-700 px-2 text-center 2xl:flex"
+      className=" top-2/5 absolute right-0 hidden -translate-x-64  flex-col border-l-2 border-cyan-700 px-2 text-center 2xl:flex"
     >
       {allProjects.map((project) => {
         return (
-          <Link href={project.url}>
+          <Link href={project.url} key={project._id}>
             <a
               key={project._id}
               className={classNames(
@@ -110,15 +110,18 @@ const ProjectSelector: React.FC<ProjectSelectorProps> = ({
                 "flex items-center rounded-md px-3 py-2 text-lg font-medium"
               )}
             >
-              {project._id === selectedProject._id && (
-                <ChevronRightIcon className="h-5 w-5" />
-              )}
+              <ChevronRightIcon
+                className={classNames(
+                  project._id === selectedProject._id ? "visible" : "invisible",
+                  "h-5 w-5"
+                )}
+              />
               <span className="truncate">{project.title}</span>
             </a>
           </Link>
         );
       })}
-    </nav>
+    </div>
   );
 };
 
