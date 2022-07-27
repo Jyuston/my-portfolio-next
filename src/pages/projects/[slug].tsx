@@ -62,7 +62,7 @@ const ProjectPage: NextPage<ProjectPageProps> = ({ project }) => {
         enterFrom="translate-y-5 opacity-0"
         enterTo="opacity-100"
       >
-        <div className="flex w-3/4 flex-col gap-3 rounded-lg bg-slate-50/80 p-8 text-start marker:mb-6 md:px-8">
+        <div className="flex flex-col gap-3 rounded-lg bg-slate-50/80 p-8 text-start marker:mb-6 md:px-8 xl:w-3/4">
           <article>
             <div className="mb-4">
               <h1 className="mb-2 text-3xl font-bold">{project.title}</h1>
@@ -96,7 +96,7 @@ const ProjectSelector: React.FC<ProjectSelectorProps> = ({
   return (
     <div
       aria-label="Sidebar"
-      className=" top-2/5 absolute right-0 hidden -translate-x-64  flex-col border-l-2 border-cyan-700 px-2 text-center 2xl:flex"
+      className=" top-2/5 absolute right-0 hidden flex-col  border-l-2 border-cyan-700 px-2 text-center xl:flex xl:-translate-x-1/3"
     >
       {allProjects.map((project) => {
         return (

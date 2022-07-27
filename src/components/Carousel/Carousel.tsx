@@ -25,3 +25,12 @@ const Carousel: React.FC<CarouselProps> = ({ children }) => {
 };
 
 export default Carousel;
+
+{
+  /* <div className="snap-x snap-mandatory items-center overflow-scroll overflow-y-hidden scroll-smooth whitespace-nowrap">
+  {children}
+</div>
+<a href="#1">1</a>
+<a href="#2">2</a>
+<a href="#3">3</a> */
+}

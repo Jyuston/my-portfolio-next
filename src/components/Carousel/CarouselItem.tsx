@@ -25,3 +25,15 @@ const CarouselItem: React.FC<CarouselItemProps> = ({
 };
 
 export default CarouselItem;
+
+{
+  /* <div
+id={id}
+className={classNames(
+  "inline-flex aspect-video w-full snap-center snap-always items-center justify-center",
+  className
+)}
+>
+{children}
+</div> */
+}
