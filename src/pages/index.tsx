@@ -32,7 +32,7 @@ const Home: NextPage<Props> = ({ projects }) => {
       <div className="my-12 selection:bg-indigo-500 selection:text-white md:mx-8">
         <div>
           <h1 className="my-5 text-4xl font-medium text-slate-700">
-            Welcome 🎉
+            Welcome ✨
           </h1>
           <h2 className=" text-3xl font-medium text-gray-500 ">
             My name is Justin Yuen.

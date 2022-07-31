@@ -48,7 +48,7 @@ const MenuDropdown: React.FC<MenuDropdownProps> = ({
             leaveFrom="opacity-100 translate-y-0"
             leaveTo="opacity-0 translate-y-1"
           >
-            <Popover.Panel className="absolute right-1/2 z-10 mt-2 w-screen max-w-xs translate-x-1/4 px-2 sm:px-0 md:right-0 md:translate-x-0">
+            <Popover.Panel className="absolute right-0 z-10 mt-2 w-screen max-w-xs translate-x-[90px]  px-2 sm:px-0 md:right-0 md:translate-x-0">
               {({ close }) => (
                 <div className="overflow-hidden rounded-md shadow-lg ring-1 ring-black ring-opacity-5 ">
                   <div className="relative grid gap-3 bg-white px-5 py-6 sm:gap-8 sm:p-4">

@@ -6,7 +6,9 @@ import { GetStaticPaths, GetStaticProps, NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
 import Carousel from "src/components/Carousel/Carousel";
+import Tag from "src/components/Tag";
 import classNames from "src/utils/classNames";
+import Image from "next/image";
 
 type ProjectPageProps = {
   project: Project;
@@ -43,7 +45,7 @@ export const getStaticProps: GetStaticProps<ProjectPageProps> = ({
 
 const ProjectPage: NextPage<ProjectPageProps> = ({ project }) => {
   return (
-    <div className=" flex flex-col justify-center gap-4 py-12">
+    <div className="flex flex-col gap-4 py-12">
       <Head>
         <title>Justin Yuen - Projects</title>
       </Head>
@@ -61,13 +63,19 @@ const ProjectPage: NextPage<ProjectPageProps> = ({ project }) => {
         enterFrom="translate-y-5 opacity-0"
         enterTo="opacity-100"
       >
-        <div className="flex flex-col gap-3 rounded-lg bg-slate-50/80 p-8 text-start marker:mb-6 md:px-8 xl:w-3/4">
+        <div className="flex flex-col gap-3 rounded-lg bg-slate-50/80 p-8 marker:mb-6 md:px-8 xl:w-3/4">
           <article>
             <div className="mb-4">
               <h1 className="mb-2 text-3xl font-bold">{project.title}</h1>
               <time dateTime={project.date} className="text-md text-slate-600">
                 {format(parseISO(project.date), "LLLL d, yyyy")}
               </time>
+            </div>
+
+            <div className="my-5 flex flex-row flex-wrap gap-2 md:w-3/4">
+              {project.tags.map((tag) => (
+                <Tag key={tag._id} tag={tag} />
+              ))}
             </div>
 
             <div
