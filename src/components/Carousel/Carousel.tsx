@@ -1,36 +1,33 @@
-import React, { useState, Children } from "react";
+import useEmblaCarousel, { EmblaOptionsType } from "embla-carousel-react";
+import Image from "next/image";
+import React from "react";
 
-import classNames from "src/utils/classNames";
-import CarouselItem from "./CarouselItem";
+import { Image as ImageType } from "contentlayer/generated";
 
 type CarouselProps = {
-  children: React.ReactNode;
+  options?: EmblaOptionsType;
+  images: ImageType[];
 };
 
-const Carousel: React.FC<CarouselProps> = ({ children }) => {
-  const numberofChildren = Children.toArray(children).length;
+const Carousel: React.FC<CarouselProps> = ({ options, images }) => {
+  const [emblaRef] = useEmblaCarousel();
 
   return (
-    <>
-      <div className="snap-x snap-mandatory items-center overflow-scroll overflow-y-hidden scroll-smooth whitespace-nowrap">
-        {children}
+    <div ref={emblaRef} className="overflow-hidden">
+      <div className="flex">
+        {images.map((image) => (
+          <div className="relative basis-full" key={image._id}>
+            <Image
+              width={(image.width / image.height) * 300}
+              height={300}
+              src={image.src}
+              priority
+            />
+          </div>
+        ))}
       </div>
-
-      {/* {React.Children.map(children, (child)=>(<a href={child.props}))} */}
-      <a href="#1">1</a>
-      <a href="#2">2</a>
-      <a href="#3">3</a>
-    </>
+    </div>
   );
 };
 
 export default Carousel;
-
-{
-  /* <div className="snap-x snap-mandatory items-center overflow-scroll overflow-y-hidden scroll-smooth whitespace-nowrap">
-  {children}
-</div>
-<a href="#1">1</a>
-<a href="#2">2</a>
-<a href="#3">3</a> */
-}

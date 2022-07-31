@@ -9,8 +9,8 @@ tags:
   - name: HTML
   - name: Bootstrap CSS
 links:
-  - name: link1.com
-  - name: link2.com
+  - url: link1.com
+  - url: link2.com
 ---
 
 Ullamco et nostrud magna commodo nostrud occaecat quis pariatur id ipsum. Ipsum

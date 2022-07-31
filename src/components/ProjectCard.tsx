@@ -10,13 +10,17 @@ const ProjectCard: React.FC<Project> = ({
   tags,
   date,
   coverImage,
+  images,
 }) => (
   <Link href={url}>
     <div className="flex flex-col overflow-hidden rounded-md transition duration-200 hover:-translate-y-2 hover:cursor-pointer hover:drop-shadow-xl md:h-60 md:flex-row">
       <div className="aspect-video h-full bg-gradient-to-tr from-violet-500 to-fuchsia-500/70 md:aspect-square">
         <img
           className="h-full w-full object-cover"
-          src="https://images.unsplash.com/photo-1518098268026-4e89f1a2cd8e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1548&q=80"
+          src={
+            images?.[0]?.src ||
+            "https://images.unsplash.com/photo-1518098268026-4e89f1a2cd8e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1548&q=80"
+          }
         ></img>
       </div>
 

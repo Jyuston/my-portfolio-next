@@ -6,7 +6,7 @@ type TagProps = {
 
 const Tag: React.FC<TagProps> = ({ tag }) => {
   return (
-    <span className="inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium bg-green-100 text-green-800">
+    <span className="inline-flex items-center rounded-full bg-indigo-100 px-3 py-0.5 text-sm font-medium text-indigo-800">
       {tag.name}
     </span>
   );

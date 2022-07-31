@@ -10,7 +10,7 @@ const About: NextPage = () => (
     </Head>
     <div className="my-12 flex flex-col md:mx-8">
       <h1 className="mb-5 text-4xl font-medium text-slate-700">About 🤠</h1>
-      <h2 className="max-w-3xl pb-7 text-3xl font-medium text-gray-500">
+      <h2 className="max-w-3/4 pb-7 text-3xl font-medium text-gray-500">
         I'm a highly motivated engineer with a passion for learning and
         understanding. I enjoy working out, travelling and spending time amongst
         friends and family.

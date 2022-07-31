@@ -9,8 +9,8 @@ tags:
   - name: Firebase Auth
   - name: Firestore
 links:
-  - name: link3.com
-  - name: link4.com
+  - url: link3.com
+  - url: link4.com
 ---
 
 Ullamco et nostrud magna commodo nostrud occaecat quis pariatur id ipsum.

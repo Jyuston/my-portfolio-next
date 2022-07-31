@@ -1,5 +1,5 @@
 ---
-title: CSR Connect
+title: Movie DB
 date: 2021-08-12
 description: QA and Release Management of CSR Connect.
 coverImage: image2.png
@@ -7,10 +7,9 @@ tags:
   - name: NextJS
   - name: React
   - name: Vercel
-
 links:
-  - name: link3.com
-  - name: link4.com
+  - url: link3.com
+  - url: link4.com
 ---
 
 Mollit nisi cillum exercitation minim officia velit laborum non Lorem

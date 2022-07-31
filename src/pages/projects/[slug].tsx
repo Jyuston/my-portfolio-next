@@ -1,13 +1,12 @@
+import { Transition } from "@headlessui/react";
+import { ChevronRightIcon } from "@heroicons/react/solid";
+import { allProjects, Project } from "contentlayer/generated";
+import { format, parseISO } from "date-fns";
+import { GetStaticPaths, GetStaticProps, NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
-import { format, parseISO } from "date-fns";
-import { allProjects, Project } from "contentlayer/generated";
-import { GetStaticPaths, GetStaticProps, NextPage } from "next";
-import { Transition } from "@headlessui/react";
 import Carousel from "src/components/Carousel/Carousel";
-import CarouselItem from "src/components/Carousel/CarouselItem";
 import classNames from "src/utils/classNames";
-import { ChevronRightIcon } from "@heroicons/react/solid";
 
 type ProjectPageProps = {
   project: Project;
@@ -30,7 +29,7 @@ export const getStaticProps: GetStaticProps<ProjectPageProps> = ({
     (project) => project._raw.flattenedPath === params!.slug
   );
 
-  if (!project) {
+  if (!project || !project.images) {
     return { notFound: true };
   }
 
@@ -72,10 +71,12 @@ const ProjectPage: NextPage<ProjectPageProps> = ({ project }) => {
             </div>
 
             <div
-              className="prose lg:prose-xl"
+              className="prose lg:prose-xl "
               dangerouslySetInnerHTML={{ __html: project.body.html }}
             />
           </article>
+
+          {project.images && <Carousel images={project.images} />}
         </div>
       </Transition>
 
@@ -96,7 +97,7 @@ const ProjectSelector: React.FC<ProjectSelectorProps> = ({
   return (
     <div
       aria-label="Sidebar"
-      className=" top-2/5 absolute right-0 hidden flex-col  border-l-2 border-cyan-700 px-2 text-center xl:flex xl:-translate-x-1/3"
+      className=" absolute top-48 right-96 hidden flex-col  border-l-2 border-cyan-700 px-2 text-center xl:flex xl:-translate-x-1/3"
     >
       {allProjects.map((project) => {
         return (

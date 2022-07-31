@@ -6,8 +6,8 @@ coverImage: image2.png
 tags:
   - name: Wordpress
 links:
-  - name: link3.com
-  - name: link4.com
+  - url: link3.com
+  - url: link4.com
 ---
 
 Mollit nisi cillum exercitation minim officia velit laborum non Lorem

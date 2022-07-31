@@ -24,7 +24,6 @@ const Header: React.FC = () => {
 
         <div className="flex flex-row gap-4 py-4">
           <MenuButton url="/">Home</MenuButton>
-          <MenuButton url="/about">About</MenuButton>
           <MenuDropdown dropdownItems={dropdownItems}>Projects</MenuDropdown>
         </div>
       </div>
