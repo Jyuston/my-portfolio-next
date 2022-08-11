@@ -26,7 +26,7 @@ const MenuDropdown: React.FC<MenuDropdownProps> = ({
           <Popover.Button
             className={classNames(
               open ? "text-gray-600" : "text-gray-500",
-              "group inline-flex items-center rounded-sm text-base font-medium hover:text-gray-600 focus:outline-none  focus:ring-gray-400"
+              "group inline-flex items-center rounded-sm text-lg font-medium hover:text-gray-600 focus:outline-none  focus:ring-gray-400"
             )}
           >
             <span>{children}</span>

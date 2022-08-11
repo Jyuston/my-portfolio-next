@@ -32,7 +32,7 @@ const Home: NextPage<Props> = ({ projects }) => {
       </Head>
 
       <div className="my-12 selection:bg-indigo-500 selection:text-white md:mx-8">
-        <div className="flex h-[60vh] gap-36 md:pt-24">
+        <div className="flex h-[40vh] w-10/12 justify-between md:pt-24">
           <Transition
             show={true}
             appear={true}
@@ -164,7 +164,7 @@ const Home: NextPage<Props> = ({ projects }) => {
           enterFrom="translate-y-5 opacity-0"
           enterTo="opacity-100"
         >
-          <div className="mb-7 grid gap-5 pt-2 xl:grid-cols-2">
+          <div className="mb-36 grid gap-5 pt-2 xl:grid-cols-2">
             {projects.map((project, idx) => (
               <ProjectCard key={idx} {...project} />
             ))}
