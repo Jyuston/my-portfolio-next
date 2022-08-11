@@ -8,7 +8,6 @@ import Link from "next/link";
 import Carousel from "src/components/Carousel/Carousel";
 import Tag from "src/components/Tag";
 import classNames from "src/utils/classNames";
-import Image from "next/image";
 
 type ProjectPageProps = {
   project: Project;
@@ -45,7 +44,7 @@ export const getStaticProps: GetStaticProps<ProjectPageProps> = ({
 
 const ProjectPage: NextPage<ProjectPageProps> = ({ project }) => {
   return (
-    <div className="flex flex-col gap-4 py-12">
+    <div className="relative flex flex-col gap-4 py-12">
       <Head>
         <title>Justin Yuen - Projects</title>
       </Head>
@@ -56,14 +55,14 @@ const ProjectPage: NextPage<ProjectPageProps> = ({ project }) => {
         </a>
       </Link>
 
-      <Transition
-        show={true}
-        appear={true}
-        enter="transition duration-500"
-        enterFrom="translate-y-5 opacity-0"
-        enterTo="opacity-100"
-      >
-        <div className="flex flex-col gap-3 rounded-lg bg-slate-50/80 p-8 marker:mb-6 md:px-8 xl:w-3/4">
+      <div className="flex flex-col gap-3 rounded-lg bg-slate-50/80 p-8 marker:mb-6 md:px-8 xl:w-3/4">
+        <Transition
+          show={true}
+          appear={true}
+          enter="transition duration-500"
+          enterFrom="translate-y-5 opacity-0"
+          enterTo="opacity-100"
+        >
           <article>
             <div className="mb-4">
               <h1 className="mb-2 text-3xl font-bold">{project.title}</h1>
@@ -79,14 +78,16 @@ const ProjectPage: NextPage<ProjectPageProps> = ({ project }) => {
             </div>
 
             <div
-              className="prose lg:prose-xl "
+              className="prose mb-5 lg:prose-xl"
               dangerouslySetInnerHTML={{ __html: project.body.html }}
             />
           </article>
 
-          {project.images && <Carousel images={project.images} />}
-        </div>
-      </Transition>
+          {project.images && project.images.length > 0 && (
+            <Carousel images={project.images} />
+          )}
+        </Transition>
+      </div>
 
       <ProjectSelector selectedProject={project}></ProjectSelector>
 
@@ -105,7 +106,7 @@ const ProjectSelector: React.FC<ProjectSelectorProps> = ({
   return (
     <div
       aria-label="Sidebar"
-      className=" absolute top-48 right-96 hidden flex-col  border-l-2 border-cyan-700 px-2 text-center xl:flex xl:-translate-x-1/3"
+      className=" absolute top-64 right-96 hidden flex-col  border-l-2 border-indigo-700 px-2 text-center xl:-translate-x-1/3 2xl:flex"
     >
       {allProjects.map((project) => {
         return (
@@ -114,8 +115,8 @@ const ProjectSelector: React.FC<ProjectSelectorProps> = ({
               key={project._id}
               className={classNames(
                 project._id === selectedProject._id
-                  ? " text-cyan-700"
-                  : "text-gray-600 hover:text-cyan-700",
+                  ? " text-indigo-700"
+                  : "text-gray-600 hover:text-indigo-700",
                 "flex items-center rounded-md px-3 py-2 text-lg font-medium"
               )}
             >

@@ -1,6 +1,8 @@
 import useEmblaCarousel, { EmblaOptionsType } from "embla-carousel-react";
 import Image from "next/future/image";
 import React, { useCallback } from "react";
+import { ChevronRightIcon } from "@heroicons/react/solid";
+import { ChevronLeftIcon } from "@heroicons/react/solid";
 
 import { Image as ImageType } from "contentlayer/generated";
 
@@ -21,15 +23,16 @@ const Carousel: React.FC<CarouselProps> = ({ options, images }) => {
   }, [emblaApi]);
 
   return (
-    <div>
-      <div ref={emblaRef} className="overflow-hidden rounded-md bg-purple-200">
+    <div className="relative">
+      <div ref={emblaRef} className=" overflow-hidden rounded-md bg-gray-200">
         <div className="flex items-center">
           {images.map((image) => (
             <div
-              className="relative ml-4 shrink-0 basis-full md:basis-2/3"
+              className="relative ml-2 shrink-0 basis-full md:my-4 md:ml-4 md:basis-10/12"
               key={image._id}
             >
               <Image
+                style={{ aspectRatio: `${16}/${9}` }}
                 src={image.src}
                 width={(image.width / image.height) * 800}
                 height={800}
@@ -39,11 +42,23 @@ const Carousel: React.FC<CarouselProps> = ({ options, images }) => {
         </div>
       </div>
 
-      <button className="embla__prev" onClick={scrollPrev}>
-        Prev
+      <button
+        onClick={scrollPrev}
+        type="button"
+        className="absolute bottom-1/2 ml-4  inline-flex translate-y-3 items-center rounded-full border border-transparent bg-gray-600/50 p-2 text-base font-medium text-white shadow-sm hover:bg-gray-700/50 sm:p-3"
+      >
+        <ChevronLeftIcon className="h-2 w-2 sm:h-4 sm:w-4" aria-hidden="true" />
       </button>
-      <button className="embla__next" onClick={scrollNext}>
-        Next
+
+      <button
+        onClick={scrollNext}
+        type="button"
+        className="xs:text-base absolute bottom-1/2 right-0  mr-4 inline-flex translate-y-3 items-center rounded-full border border-transparent bg-gray-600/50 p-2 font-medium text-white shadow-sm hover:bg-gray-700/50 sm:p-3"
+      >
+        <ChevronRightIcon
+          className="h-2 w-2 sm:h-4 sm:w-4"
+          aria-hidden="true"
+        />
       </button>
     </div>
   );
