@@ -1,6 +1,10 @@
 const LinkedInIcon: React.FC = () => {
   return (
-    <a href="https://www.linkedin.com/in/yuenjustin/" target="_blank">
+    <a
+      href="https://www.linkedin.com/in/yuenjustin/"
+      target="_blank"
+      rel="noreferrer"
+    >
       <div className="inline-flex items-center gap-2 rounded-full bg-blue-500 px-4 py-1 text-sm font-medium text-slate-200 transition duration-300 ease-in-out hover:scale-110 hover:cursor-pointer">
         <svg
           xmlns="http://www.w3.org/2000/svg"

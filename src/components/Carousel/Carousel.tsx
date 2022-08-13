@@ -32,6 +32,7 @@ const Carousel: React.FC<CarouselProps> = ({ options, images }) => {
               key={image.src}
             >
               <Image
+                alt="Carousel Image"
                 priority
                 style={{ aspectRatio: `${16}/${9}` }}
                 src={image.src}

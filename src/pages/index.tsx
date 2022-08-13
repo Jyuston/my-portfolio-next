@@ -49,7 +49,7 @@ const Home: NextPage<Props> = ({ projects }) => {
               </h2>
 
               <h3 className=" mb-7 text-3xl font-medium text-gray-500 md:text-5xl">
-                I'm a
+                I&apos;m a
                 <div className="mx-4 inline-block -skew-y-1 bg-gradient-to-r from-pink-500 to-yellow-500 px-[1px] text-3xl text-slate-800 md:p-1 md:text-5xl">
                   <span className="inline-block skew-y-1">
                     QA & DevOps Engineer
@@ -68,6 +68,7 @@ const Home: NextPage<Props> = ({ projects }) => {
 
           <div className="m-auto w-60 md:m-0 md:w-72 xl:mr-40 xl:w-auto">
             <Image
+              alt="Picture of Justin Memoji"
               className=" aspect-square"
               priority
               src={Laptop}
@@ -85,9 +86,9 @@ const Home: NextPage<Props> = ({ projects }) => {
             </h2>
 
             <h2 className="prose prose-xl mb-3 text-gray-500 xl:prose-2xl">
-              I'm a highly motivated engineer with a passion for learning and
-              understanding new concepts. I enjoy working out, travelling and
-              spending time amongst friends and family.
+              I&apos;m a highly motivated engineer with a passion for learning
+              and understanding new concepts. I enjoy working out, travelling
+              and spending time amongst friends and family.
             </h2>
             <div className="prose prose-xl  text-gray-500 xl:prose-2xl">
               Career wise, I have an interest in{" "}
@@ -108,6 +109,7 @@ const Home: NextPage<Props> = ({ projects }) => {
             <div className="flex items-center gap-4">
               <div>
                 <Image
+                  alt="Company Logo"
                   className="aspect-square rounded-md"
                   src={CSRLogo}
                   priority
@@ -135,6 +137,7 @@ const Home: NextPage<Props> = ({ projects }) => {
             <div className="flex items-center gap-4">
               <div>
                 <Image
+                  alt="University Logo"
                   className="aspect-square rounded-md"
                   src={UTSLogo}
                   priority
