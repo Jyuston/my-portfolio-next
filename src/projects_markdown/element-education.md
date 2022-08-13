@@ -1,8 +1,7 @@
 ---
 title: Element Education
 date: 2021-08-12
-description: Tuition Website on Wordpress.
-coverImage: image2.png
+description: Tuition website on Wordpress.
 tags:
   - name: Wordpress
 links:

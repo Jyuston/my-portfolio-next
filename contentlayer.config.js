@@ -65,11 +65,6 @@ export const Project = defineDocumentType(() => ({
       description: "One liner description of the project",
       required: true,
     },
-    coverImage: {
-      type: "string",
-      description: "Cover image for project page",
-      required: true,
-    },
     tags: {
       type: "list",
       of: Tag,

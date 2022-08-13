@@ -1,8 +1,7 @@
 ---
 title: Movie DB
 date: 2021-08-12
-description: QA and Release Management of CSR Connect.
-coverImage: image2.png
+description: Interactive movie archive.
 tags:
   - name: NextJS
   - name: React

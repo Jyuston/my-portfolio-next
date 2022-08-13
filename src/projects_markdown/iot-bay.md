@@ -1,8 +1,7 @@
 ---
 title: IoT Bay
 date: 2021-12-24
-description: Online shop for 'Internet of Things' devices.
-coverImage: image.png
+description: E-commerce website for 'IoT' devices.
 tags:
   - name: Apache NetBeans
   - name: Java

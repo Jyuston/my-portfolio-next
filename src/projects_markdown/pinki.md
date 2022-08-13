@@ -1,8 +1,7 @@
 ---
 title: Pinki
 date: 2021-12-24
-description: A promise keeping application.
-coverImage: image2.png
+description: Promise keeping application.
 tags:
   - name: NextJS
   - name: React Query

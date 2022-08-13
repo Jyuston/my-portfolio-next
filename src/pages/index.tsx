@@ -48,7 +48,7 @@ const Home: NextPage<Props> = ({ projects }) => {
                 My name is Justin Yuen.
               </h2>
 
-              <h3 className=" mb-7 text-4xl font-medium text-gray-500 md:text-5xl">
+              <h3 className=" mb-7 text-3xl font-medium text-gray-500 md:text-5xl">
                 I'm a
                 <div className="mx-4 inline-block -skew-y-1 bg-gradient-to-r from-pink-500 to-yellow-500 px-[1px] text-3xl text-slate-800 md:p-1 md:text-5xl">
                   <span className="inline-block skew-y-1">
@@ -108,7 +108,7 @@ const Home: NextPage<Props> = ({ projects }) => {
             <div className="flex items-center gap-4">
               <div>
                 <Image
-                  className="aspect-square"
+                  className="aspect-square rounded-md"
                   src={CSRLogo}
                   priority
                   layout="intrinsic"
@@ -132,9 +132,10 @@ const Home: NextPage<Props> = ({ projects }) => {
             <h2 className="mb-6 font-mono text-4xl font-bold text-indigo-500">
               Education
             </h2>
-            <div className="flex items-center gap-4 ">
+            <div className="flex items-center gap-4">
               <div>
                 <Image
+                  className="aspect-square rounded-md"
                   src={UTSLogo}
                   priority
                   layout="intrinsic"

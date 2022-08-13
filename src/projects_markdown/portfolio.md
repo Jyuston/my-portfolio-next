@@ -1,8 +1,7 @@
 ---
 title: Porfolio Website
 date: 2021-12-24
-description: A personal portfolio for all of my work.
-coverImage: image2.png
+description: A portfolio for all of my work.
 tags:
   - name: NextJS
   - name: Content Layer

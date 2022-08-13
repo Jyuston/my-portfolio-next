@@ -11,7 +11,6 @@ const ProjectCard: React.FC<Project> = ({
   description,
   tags,
   date,
-  coverImage,
   images,
 }) => (
   <Link href={url}>
@@ -28,7 +27,7 @@ const ProjectCard: React.FC<Project> = ({
 
       <div className="grow bg-white/70 p-5 md:overflow-hidden">
         <div className="flex flex-col items-start">
-          <h2 className="text-md text-xl font-medium text-slate-700">
+          <h2 className="text-md text-2xl font-medium text-slate-700">
             {title}
           </h2>
           <time
@@ -43,7 +42,7 @@ const ProjectCard: React.FC<Project> = ({
             ))}
           </div>
         </div>
-        <h2 className="my-4 truncate font-medium text-slate-700">
+        <h2 className="text-md my-4 truncate text-xl font-medium text-slate-700">
           {description}
         </h2>
       </div>
