@@ -73,7 +73,7 @@ const ProjectPage: NextPage<ProjectPageProps> = ({ project }) => {
 
             <div className="my-5 flex flex-row flex-wrap gap-2 md:w-3/4">
               {project.tags.map((tag) => (
-                <Tag key={tag._id} tag={tag} />
+                <Tag key={tag.name} tag={tag} />
               ))}
             </div>
 

@@ -39,7 +39,7 @@ const ProjectCard: React.FC<Project> = ({
           </time>
           <div className="my-2 flex flex-row flex-wrap gap-2">
             {tags.map((tag) => (
-              <Tag key={tag._id} tag={tag} />
+              <Tag key={tag.name} tag={tag} />
             ))}
           </div>
         </div>
@@ -52,7 +52,3 @@ const ProjectCard: React.FC<Project> = ({
 );
 
 export default ProjectCard;
-
-{
-  /* <div className="h-full bg-[url('https://images.unsplash.com/photo-1518098268026-4e89f1a2cd8e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1548&q=80')] object-fill "></div> */
-}

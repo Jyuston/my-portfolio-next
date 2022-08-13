@@ -10,7 +10,7 @@ import LinkedInIcon from "src/components/Icons/LinkedInIcon";
 
 import CSRLogo from "../../public/images/icons/csr-logo.jpg";
 import UTSLogo from "../../public/images/icons/uts-logo.jpg";
-import Laptop from "../../public/images/Laptop2x.png";
+import Laptop from "../../public/images/Laptop.png";
 
 type Props = {
   projects: Project[];
@@ -31,8 +31,8 @@ const Home: NextPage<Props> = ({ projects }) => {
         <title>Justin Yuen - Home</title>
       </Head>
 
-      <div className="my-12 selection:bg-indigo-500 selection:text-white md:mx-8">
-        <div className="flex h-[40vh] w-10/12 justify-between md:pt-24">
+      <div className="my-12 selection:bg-indigo-500 selection:text-white sm:mx-8 md:mt-24">
+        <div className="flex flex-col-reverse justify-between xl:flex-row">
           <Transition
             show={true}
             appear={true}
@@ -40,17 +40,17 @@ const Home: NextPage<Props> = ({ projects }) => {
             enterFrom="translate-y-5 opacity-0"
             enterTo="opacity-100"
           >
-            <div>
-              <h1 className="my-5 font-mono text-5xl font-bold text-indigo-500">
+            <div className="m-auto xl:text-left">
+              <h1 className="my-5 font-mono text-5xl font-bold text-indigo-500 ">
                 Welcome
               </h1>
-              <h2 className=" mb-4 text-5xl font-medium text-gray-500">
+              <h2 className=" mb-4 text-3xl font-medium text-gray-500 md:text-5xl">
                 My name is Justin Yuen.
               </h2>
 
-              <h3 className="mb-7 text-5xl font-medium text-gray-500">
+              <h3 className=" mb-7 text-4xl font-medium text-gray-500 md:text-5xl">
                 I'm a
-                <div className="mx-4 inline-block -skew-y-1 bg-gradient-to-r from-pink-500 to-yellow-500 p-1 text-slate-800">
+                <div className="mx-4 inline-block -skew-y-1 bg-gradient-to-r from-pink-500 to-yellow-500 px-[1px] text-3xl text-slate-800 md:p-1 md:text-5xl">
                   <span className="inline-block skew-y-1">
                     QA & DevOps Engineer
                   </span>
@@ -65,30 +65,31 @@ const Home: NextPage<Props> = ({ projects }) => {
               </div>
             </div>
           </Transition>
-          <div>
+
+          <div className="m-auto w-60 md:m-0 md:w-72 xl:mr-40 xl:w-auto">
             <Image
               className=" aspect-square"
               priority
               src={Laptop}
-              layout="fixed"
+              layout="intrinsic"
               height={400}
               width={400}
             />
           </div>
         </div>
 
-        <div className="flex md:h-[30vh]">
-          <div>
+        <div>
+          <div className="my-16 flex flex-col md:my-48">
             <h2 className="mb-2 flex  font-mono text-5xl font-bold text-indigo-500">
               About
             </h2>
 
-            <h2 className="prose prose-2xl mb-3 text-gray-500">
+            <h2 className="prose prose-xl mb-3 text-gray-500 xl:prose-2xl">
               I'm a highly motivated engineer with a passion for learning and
               understanding new concepts. I enjoy working out, travelling and
               spending time amongst friends and family.
             </h2>
-            <div className="prose prose-2xl  text-gray-500">
+            <div className="prose prose-xl  text-gray-500 xl:prose-2xl">
               Career wise, I have an interest in{" "}
               <span className="font-bold text-gray-600">Web Applications</span>,{" "}
               <span className="font-bold text-gray-600">DevOps</span> &{" "}
@@ -99,18 +100,18 @@ const Home: NextPage<Props> = ({ projects }) => {
           </div>
         </div>
 
-        <div className="my-4 flex w-11/12 flex-col gap-8 md:h-[50vh] xl:my-8  xl:h-[20vh] xl:flex-row xl:justify-between">
+        <div className="my-48 flex w-11/12 flex-col gap-8  xl:flex-row xl:justify-between">
           <div>
             <h2 className="mb-6 font-mono text-4xl font-bold text-indigo-500">
               Occupation
             </h2>
-            <div className="flex flex-col gap-4 sm:flex-row">
+            <div className="flex items-center gap-4">
               <div>
                 <Image
                   className="aspect-square"
                   src={CSRLogo}
                   priority
-                  layout="fixed"
+                  layout="intrinsic"
                   height={100}
                   width={100}
                 />
@@ -131,19 +132,19 @@ const Home: NextPage<Props> = ({ projects }) => {
             <h2 className="mb-6 font-mono text-4xl font-bold text-indigo-500">
               Education
             </h2>
-            <div className="flex flex-col gap-4 sm:flex-row">
+            <div className="flex items-center gap-4 ">
               <div>
                 <Image
                   src={UTSLogo}
                   priority
-                  layout="fixed"
+                  layout="intrinsic"
                   width={100}
                   height={100}
                 />
               </div>
               <div>
                 <div className=" text-xl font-medium text-gray-500">
-                  Bachelors of Information Technology Scholar
+                  Bachelors of Information Technology
                 </div>
                 <div className="text-lg font-bold text-blue-700">
                   Univeristy of Technology Sydney
@@ -153,7 +154,7 @@ const Home: NextPage<Props> = ({ projects }) => {
           </div>
         </div>
 
-        <h2 className="mb-6 flex font-mono text-5xl font-bold text-indigo-500">
+        <h2 className="mb-6 flex font-mono text-4xl font-bold text-indigo-500">
           Projects
         </h2>
 
@@ -165,8 +166,8 @@ const Home: NextPage<Props> = ({ projects }) => {
           enterTo="opacity-100"
         >
           <div className="mb-36 grid gap-5 pt-2 xl:grid-cols-2">
-            {projects.map((project, idx) => (
-              <ProjectCard key={idx} {...project} />
+            {projects.map((project) => (
+              <ProjectCard key={project._id} {...project} />
             ))}
           </div>
         </Transition>

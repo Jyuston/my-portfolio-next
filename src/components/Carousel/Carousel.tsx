@@ -24,14 +24,15 @@ const Carousel: React.FC<CarouselProps> = ({ options, images }) => {
 
   return (
     <div className="relative">
-      <div ref={emblaRef} className=" overflow-hidden rounded-md bg-gray-200">
+      <div ref={emblaRef} className=" overflow-hidden rounded-md bg-indigo-100">
         <div className="flex items-center">
           {images.map((image) => (
             <div
               className="relative ml-2 shrink-0 basis-full md:my-4 md:ml-4 md:basis-10/12"
-              key={image._id}
+              key={image.src}
             >
               <Image
+                priority
                 style={{ aspectRatio: `${16}/${9}` }}
                 src={image.src}
                 width={(image.width / image.height) * 800}
