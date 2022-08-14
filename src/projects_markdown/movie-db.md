@@ -5,12 +5,11 @@ description: Interactive movie archive.
 tags:
   - name: NextJS
   - name: React
+  - name: React Query
   - name: Vercel
 links:
-  - url: link3.com
-    github: false
-  - url: link4.com
-    github: false
+  - url: https://github.com/Jyuston/ASD-Friyay-Group-4
+    github: true
 ---
 
 Mollit nisi cillum exercitation minim officia velit laborum non Lorem

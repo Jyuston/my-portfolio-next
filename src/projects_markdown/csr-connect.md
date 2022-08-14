@@ -9,9 +9,7 @@ tags:
   - name: Github Actions
   - name: Octopus Deploy
 links:
-  - url: link3.com
-    github: true
-  - url: link4.com
+  - url: https://www.csrconnect.com.au
     github: false
 ---
 

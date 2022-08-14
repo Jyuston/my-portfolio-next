@@ -78,8 +78,10 @@ const ProjectPage: NextPage<ProjectPageProps> = ({ project }) => {
               ))}
             </div>
 
-            <div className="my-5 flex flex-row flex-wrap gap-2 md:w-3/4">
-              <LinkComponent url={project.url} github={false} />
+            <div className="my-5 flex flex-row flex-wrap gap-4 md:w-3/4">
+              {project.links.map((link) => (
+                <LinkComponent link={link} />
+              ))}
             </div>
 
             <div

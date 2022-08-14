@@ -4,10 +4,9 @@ date: 2021-08-12
 description: Tuition website on Wordpress.
 tags:
   - name: Wordpress
+  - name: Figma
 links:
-  - url: link3.com
-    github: false
-  - url: link4.com
+  - url: http://elementeducationau.com
     github: false
 ---
 

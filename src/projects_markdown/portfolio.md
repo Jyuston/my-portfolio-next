@@ -8,10 +8,8 @@ tags:
   - name: HeadlessUI
   - name: Tailwind CSS
 links:
-  - url: link3.com
-    github: false
-  - url: link4.com
-    github: false
+  - url: https://github.com/Jyuston/my-portfolio-next
+    github: true
 ---
 
 Ullamco et nostrud magna commodo nostrud occaecat quis pariatur id ipsum.

@@ -8,10 +8,8 @@ tags:
   - name: Firebase Auth
   - name: Firestore
 links:
-  - url: link3.com
-    github: false
-  - url: link4.com
-     github: false
+  - url: https://github.com/Jyuston/AIP-Assessment-2
+    github: true
 ---
 
 Ullamco et nostrud magna commodo nostrud occaecat quis pariatur id ipsum.
