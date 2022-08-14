@@ -31,7 +31,7 @@ const Home: NextPage<Props> = ({ projects }) => {
         <title>Justin Yuen - Home</title>
       </Head>
 
-      <div className="my-12 selection:bg-indigo-500 selection:text-white sm:mx-8 md:mt-24">
+      <div className="my-1 sm:mx-8 md:mt-24">
         <div className="flex flex-col-reverse justify-between xl:flex-row">
           <Transition
             show={true}

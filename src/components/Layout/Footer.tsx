@@ -1,7 +1,7 @@
 const Footer: React.FC = () => {
   return (
-    <div className="bg-slate-200 p-2 text-center text-lg text-gray-700">
-      <a>made with 🐸 by Justin</a>
+    <div className="bg-slate-200 p-5 text-center text-lg text-gray-700 ">
+      <a>Made with 💖 by Justin Y.</a>
     </div>
   );
 };

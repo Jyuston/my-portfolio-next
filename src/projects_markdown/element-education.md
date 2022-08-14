@@ -6,7 +6,9 @@ tags:
   - name: Wordpress
 links:
   - url: link3.com
+    github: false
   - url: link4.com
+    github: false
 ---
 
 Mollit nisi cillum exercitation minim officia velit laborum non Lorem

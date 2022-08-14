@@ -3,7 +3,7 @@ import Tag from "../Tag";
 const GithubIcon: React.FC = () => {
   return (
     <a href="https://github.com/Jyuston" target="_blank" rel="noreferrer">
-      <div className="duration-400 inline-flex items-center gap-2 rounded-full bg-gray-600 px-4 py-1 text-sm font-medium text-slate-300 transition ease-in-out hover:scale-110 hover:cursor-pointer">
+      <div className=" duration-400 inline-flex items-center gap-2 rounded-full bg-gray-600 px-4 py-1 text-sm font-medium text-slate-300 transition ease-in-out will-change-transform hover:scale-110 hover:cursor-pointer">
         <svg
           width="18"
           height="18"

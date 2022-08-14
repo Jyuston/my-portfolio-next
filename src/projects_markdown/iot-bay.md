@@ -9,7 +9,9 @@ tags:
   - name: Bootstrap CSS
 links:
   - url: link1.com
+    github: false
   - url: link2.com
+    github: false
 ---
 
 Ullamco et nostrud magna commodo nostrud occaecat quis pariatur id ipsum. Ipsum

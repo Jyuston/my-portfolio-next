@@ -25,6 +25,11 @@ const Link = defineNestedType(() => ({
       type: "string",
       required: true,
     },
+    github: {
+      type: "boolean",
+      default: false,
+      required: true,
+    },
   },
 }));
 

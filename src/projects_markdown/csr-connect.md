@@ -10,7 +10,9 @@ tags:
   - name: Octopus Deploy
 links:
   - url: link3.com
+    github: true
   - url: link4.com
+    github: false
 ---
 
 Mollit nisi cillum exercitation minim officia velit laborum non Lorem

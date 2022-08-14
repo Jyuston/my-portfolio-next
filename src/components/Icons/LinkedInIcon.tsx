@@ -5,7 +5,7 @@ const LinkedInIcon: React.FC = () => {
       target="_blank"
       rel="noreferrer"
     >
-      <div className="inline-flex items-center gap-2 rounded-full bg-blue-500 px-4 py-1 text-sm font-medium text-slate-200 transition duration-300 ease-in-out hover:scale-110 hover:cursor-pointer">
+      <div className="inline-flex items-center gap-2 rounded-full bg-blue-500 px-4 py-1 text-sm font-medium text-slate-200 transition duration-300 ease-in-out will-change-transform hover:scale-110 hover:cursor-pointer">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="16"

@@ -14,10 +14,10 @@ const Header: React.FC = () => {
   );
 
   return (
-    <div className="bg-slate-200  selection:bg-indigo-500 selection:text-white">
+    <div className="bg-slate-200">
       <div className="container flex flex-col items-center justify-between px-4 md:flex-row">
         <Link href="/">
-          <a className="py-5 text-3xl font-bold text-gray-400 transition delay-100 duration-300 ease-in-out hover:scale-110 hover:text-indigo-400">
+          <a className="py-5 text-3xl font-bold text-gray-400 transition delay-100 duration-300 ease-in-out will-change-transform hover:scale-110 hover:text-indigo-400">
             Justin Y.
           </a>
         </Link>

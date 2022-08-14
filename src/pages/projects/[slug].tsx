@@ -4,6 +4,7 @@ import { allProjects, Project } from "contentlayer/generated";
 import { format, parseISO } from "date-fns";
 import { GetStaticPaths, GetStaticProps, NextPage } from "next";
 import Head from "next/head";
+import LinkComponent from "src/components/Link";
 import Link from "next/link";
 import Carousel from "src/components/Carousel/Carousel";
 import Tag from "src/components/Tag";
@@ -75,6 +76,10 @@ const ProjectPage: NextPage<ProjectPageProps> = ({ project }) => {
               {project.tags.map((tag) => (
                 <Tag key={tag.name} tag={tag} />
               ))}
+            </div>
+
+            <div className="my-5 flex flex-row flex-wrap gap-2 md:w-3/4">
+              <LinkComponent url={project.url} github={false} />
             </div>
 
             <div
