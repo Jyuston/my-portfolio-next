@@ -15,15 +15,10 @@ const ProjectCard: React.FC<Project> = ({
 }) => (
   <Link href={url}>
     <div className="flex flex-col overflow-hidden rounded-md transition duration-200 will-change-transform hover:-translate-y-2 hover:cursor-pointer hover:drop-shadow-xl md:h-60 md:flex-row">
-      <div className="aspect-video h-full bg-gradient-to-tr from-violet-500 to-fuchsia-500/70 md:aspect-square ">
-        <Image
-          priority
-          alt="Cover Image of Project"
-          objectFit="cover"
-          width="10"
-          height="10"
-          layout="responsive"
-          src={images?.[0]?.src || kayne}
+      <div className="aspect-video h-full md:aspect-square ">
+        <img
+          src={images?.[0]?.src}
+          className="aspect-square h-full object-cover"
         />
       </div>
 
