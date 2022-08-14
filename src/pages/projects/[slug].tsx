@@ -80,7 +80,7 @@ const ProjectPage: NextPage<ProjectPageProps> = ({ project }) => {
 
             <div className="my-5 flex flex-row flex-wrap gap-4 md:w-3/4">
               {project.links.map((link) => (
-                <LinkComponent link={link} />
+                <LinkComponent link={link} key={link.url} />
               ))}
             </div>
 
