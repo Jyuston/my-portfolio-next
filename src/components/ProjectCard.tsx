@@ -14,17 +14,19 @@ const ProjectCard: React.FC<Project> = ({
   images,
 }) => (
   <Link href={url}>
-    <div className="flex flex-col overflow-hidden rounded-md transition duration-200 hover:-translate-y-2 hover:cursor-pointer hover:drop-shadow-xl md:h-60 md:flex-row">
+    <div className="flex flex-col overflow-hidden rounded-md transition duration-200 will-change-transform hover:-translate-y-2 hover:cursor-pointer hover:drop-shadow-xl md:h-60 md:flex-row">
       <div className="aspect-video h-full bg-gradient-to-tr from-violet-500 to-fuchsia-500/70 md:aspect-square">
-        <Image
-          priority
-          alt="Cover Image of Project"
-          objectFit="cover"
-          width="100%"
-          height="100%"
-          layout="responsive"
-          src={images?.[0]?.src || kayne}
-        />
+        <div>
+          <Image
+            priority
+            alt="Cover Image of Project"
+            objectFit="cover"
+            width="100%"
+            height="100%"
+            layout="responsive"
+            src={images?.[0]?.src || kayne}
+          />
+        </div>
       </div>
 
       <div className="grow bg-white/70 p-5 md:overflow-hidden">
