@@ -23,12 +23,12 @@ const Carousel: React.FC<CarouselProps> = ({ options, images }) => {
   }, [emblaApi]);
 
   return (
-    <div className="relative">
+    <div className="max-w-3/4 relative">
       <div ref={emblaRef} className=" overflow-hidden rounded-md bg-indigo-100">
         <div className="flex items-center">
           {images.map((image) => (
             <div
-              className="relative ml-2 shrink-0 basis-full md:my-4 md:ml-4 md:basis-10/12"
+              className="relative ml-2 shrink-0 basis-full md:my-4 md:ml-4 md:basis-4/5"
               key={image.src}
             >
               <Image

@@ -45,18 +45,18 @@ export const getStaticProps: GetStaticProps<ProjectPageProps> = ({
 
 const ProjectPage: NextPage<ProjectPageProps> = ({ project }) => {
   return (
-    <div className="relative flex flex-col gap-4 py-12">
+    <div className="relative flex flex-col items-center gap-4 py-12">
       <Head>
         <title>Justin Yuen - Projects</title>
       </Head>
 
       <Link href="/">
-        <a className="text-md font-bold uppercase text-gray-500 hover:cursor-pointer hover:text-gray-700">
+        <a className="text-md text-left font-bold uppercase text-gray-500 hover:cursor-pointer hover:text-gray-700">
           Home
         </a>
       </Link>
 
-      <div className="flex flex-col gap-3 rounded-lg bg-slate-50/80 p-8 marker:mb-6 md:px-8 xl:w-3/4">
+      <div className="flex flex-col gap-3 rounded-lg bg-slate-50/80 p-8 marker:mb-6 md:px-8 xl:w-10/12">
         <Transition
           show={true}
           appear={true}
@@ -85,7 +85,7 @@ const ProjectPage: NextPage<ProjectPageProps> = ({ project }) => {
             </div>
 
             <div
-              className="prose mb-5 lg:prose-xl"
+              className="prose mb-16 lg:prose-xl"
               dangerouslySetInnerHTML={{ __html: project.body.html }}
             />
           </article>
@@ -113,7 +113,7 @@ const ProjectSelector: React.FC<ProjectSelectorProps> = ({
   return (
     <div
       aria-label="Sidebar"
-      className=" absolute top-64 right-96 hidden flex-col  border-l-2 border-indigo-700 px-2 text-center xl:-translate-x-1/3 2xl:flex"
+      className=" absolute top-80 right-44 hidden flex-col  border-l-2 border-indigo-700 px-2 text-center xl:-translate-x-1/3 2xl:flex"
     >
       {allProjects.map((project) => {
         return (

@@ -1,3 +1,5 @@
+import IconWrapper from "./IconWrapper";
+
 const LinkedInIcon: React.FC = () => {
   return (
     <a
@@ -5,11 +7,11 @@ const LinkedInIcon: React.FC = () => {
       target="_blank"
       rel="noreferrer"
     >
-      <div className="inline-flex items-center gap-2 rounded-full bg-blue-500 px-4 py-1 text-sm font-medium text-slate-200 transition duration-300 ease-in-out will-change-transform hover:scale-110 hover:cursor-pointer">
+      <IconWrapper bgColour="bg-blue-500">
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          width="16"
-          height="16"
+          width="18"
+          height="18"
           viewBox="0 0 24 24"
           className=" transform fill-slate-200 text-opacity-50 transition duration-200 hover:cursor-pointer "
         >
@@ -20,7 +22,7 @@ const LinkedInIcon: React.FC = () => {
           />
         </svg>
         LinkedIn
-      </div>
+      </IconWrapper>
     </a>
   );
 };

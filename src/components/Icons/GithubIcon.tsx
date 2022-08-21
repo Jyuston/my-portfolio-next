@@ -1,12 +1,13 @@
 import Tag from "../Tag";
+import IconWrapper from "./IconWrapper";
 
 const GithubIcon: React.FC = () => {
   return (
     <a href="https://github.com/Jyuston" target="_blank" rel="noreferrer">
-      <div className=" duration-400 inline-flex items-center gap-2 rounded-full bg-gray-600 px-4 py-1 text-sm font-medium text-slate-300 transition ease-in-out will-change-transform hover:scale-110 hover:cursor-pointer">
+      <IconWrapper bgColour="bg-gray-600">
         <svg
-          width="18"
-          height="18"
+          width="20"
+          height="20"
           viewBox="0 0 24 24"
           className="transform fill-slate-300 text-opacity-50 transition duration-200 hover:cursor-pointer "
         >
@@ -17,7 +18,7 @@ const GithubIcon: React.FC = () => {
           />
         </svg>
         Github
-      </div>
+      </IconWrapper>
     </a>
   );
 };
