@@ -56,7 +56,13 @@ const ProjectPage: NextPage<ProjectPageProps> = ({ project }) => {
         </a>
       </Link>
 
-      <div className="flex flex-col gap-3 rounded-lg bg-slate-50/80 p-8 marker:mb-6 md:px-8 xl:w-10/12">
+      <div className="xl:w-10/12">
+        {project.images && project.images.length > 0 && (
+          <Carousel images={project.images} />
+        )}
+      </div>
+
+      <div className="flex flex-col gap-3 rounded-lg bg-slate-50/80 p-8 drop-shadow-xl marker:mb-6 md:px-8 xl:w-10/12">
         <Transition
           show={true}
           appear={true}
@@ -64,35 +70,31 @@ const ProjectPage: NextPage<ProjectPageProps> = ({ project }) => {
           enterFrom="translate-y-5 opacity-0"
           enterTo="opacity-100"
         >
+          <div className="mb-4">
+            <h1 className="mb-2 text-3xl font-bold">{project.title}</h1>
+            <time dateTime={project.date} className="text-md text-slate-600">
+              {format(parseISO(project.date), "LLLL d, yyyy")}
+            </time>
+          </div>
+
+          <div className="my-5 flex flex-row flex-wrap gap-2 md:w-3/4">
+            {project.tags.map((tag) => (
+              <Tag key={tag.name} tag={tag} />
+            ))}
+          </div>
+
+          <div className="my-5 flex flex-row flex-wrap gap-4 md:w-3/4">
+            {project.links.map((link) => (
+              <LinkComponent link={link} key={link.url} />
+            ))}
+          </div>
+
           <article>
-            <div className="mb-4">
-              <h1 className="mb-2 text-3xl font-bold">{project.title}</h1>
-              <time dateTime={project.date} className="text-md text-slate-600">
-                {format(parseISO(project.date), "LLLL d, yyyy")}
-              </time>
-            </div>
-
-            <div className="my-5 flex flex-row flex-wrap gap-2 md:w-3/4">
-              {project.tags.map((tag) => (
-                <Tag key={tag.name} tag={tag} />
-              ))}
-            </div>
-
-            <div className="my-5 flex flex-row flex-wrap gap-4 md:w-3/4">
-              {project.links.map((link) => (
-                <LinkComponent link={link} key={link.url} />
-              ))}
-            </div>
-
             <div
               className="prose mb-16 lg:prose-xl"
               dangerouslySetInnerHTML={{ __html: project.body.html }}
             />
           </article>
-
-          {project.images && project.images.length > 0 && (
-            <Carousel images={project.images} />
-          )}
         </Transition>
       </div>
 
@@ -113,11 +115,11 @@ const ProjectSelector: React.FC<ProjectSelectorProps> = ({
   return (
     <div
       aria-label="Sidebar"
-      className=" absolute top-80 right-44 hidden flex-col  border-l-2 border-indigo-700 px-2 text-center xl:-translate-x-1/3 2xl:flex"
+      className=" absolute top-[65rem] right-44 hidden flex-col  border-l-2 border-indigo-700 px-2 text-center xl:-translate-x-1/3 2xl:flex"
     >
       {allProjects.map((project) => {
         return (
-          <Link href={project.url} key={project._id}>
+          <Link href={project.url} key={project._id} scroll={false}>
             <a
               key={project._id}
               className={classNames(

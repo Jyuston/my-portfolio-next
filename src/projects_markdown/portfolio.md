@@ -12,11 +12,7 @@ links:
     github: true
 ---
 
-Ullamco et nostrud magna commodo nostrud occaecat quis pariatur id ipsum.
-Ipsumconsequat enim id excepteur consequat nostrud esse esse fugiat dolore.
-Reprehenderit occaecat exercitation non cupidatat in eiusmod laborum ex eu
-fugiat aute culpa pariatur. Irure elit proident consequat veniam minim ipsum ex
-pariatur.
+> Siteception?! This is about the portfolio you are currently viewing! 🤯
 
 Mollit nisi cillum exercitation minim officia velit laborum non Lorem
 adipisicing dolore. Labore commodo consectetur commodo velit adipisicing irure

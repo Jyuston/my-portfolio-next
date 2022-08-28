@@ -20,7 +20,7 @@ Having used a CMS only for personal experiments, using WordPress was a great lea
 
 In addition to using WordPress, we were also involved in the brand design process, using Figma to create mock-ups and brand artifacts. Using WordPress however hindered our creative ability with stricter templating rules than a custom webpage.
 
-The following tasks & deliverables were completed:
+#### The following tasks & deliverables were completed:
 
 - Brand design including Logo and colour scheme
 - Website design with Call-to-Action button
