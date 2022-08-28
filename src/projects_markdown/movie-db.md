@@ -7,6 +7,8 @@ tags:
   - name: React
   - name: React Query
   - name: Vercel
+  - name: Prisma ORM
+  - name: MongoDB
 links:
   - url: https://github.com/Jyuston/ASD-Friyay-Group-4
     github: true
