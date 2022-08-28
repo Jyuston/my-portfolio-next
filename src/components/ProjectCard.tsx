@@ -14,7 +14,7 @@ const ProjectCard: React.FC<Project> = ({
   images,
 }) => (
   <Link href={url}>
-    <div className="flex flex-col overflow-hidden rounded-md transition duration-200 will-change-transform hover:-translate-y-2 hover:cursor-pointer hover:drop-shadow-xl md:h-60 md:flex-row">
+    <div className="flex flex-col overflow-hidden rounded-md drop-shadow-md transition duration-200 will-change-transform hover:-translate-y-2 hover:cursor-pointer hover:drop-shadow-xl md:h-60 md:flex-row">
       <div className="aspect-video h-full w-full md:aspect-square  md:w-auto ">
         <img
           width="50"
