@@ -71,13 +71,18 @@ const ProjectPage: NextPage<ProjectPageProps> = ({ project }) => {
           enterTo="opacity-100"
         >
           <div className="mb-4">
-            <h1 className="mb-2 text-3xl font-bold">{project.title}</h1>
-            <time dateTime={project.date} className="text-md text-slate-600">
+            <h1 className="mb-8 text-4xl font-bold  md:text-5xl">
+              {project.title}
+            </h1>
+            <time
+              dateTime={project.date}
+              className="text-md my-8 font-medium text-slate-600"
+            >
               {format(parseISO(project.date), "LLLL d, yyyy")}
             </time>
           </div>
 
-          <div className="my-5 flex flex-row flex-wrap gap-2 md:w-3/4">
+          <div className="my-5 mt-8 flex flex-row flex-wrap gap-2 md:w-3/4">
             {project.tags.map((tag) => (
               <Tag key={tag.name} tag={tag} />
             ))}

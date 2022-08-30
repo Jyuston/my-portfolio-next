@@ -50,7 +50,7 @@ const Carousel: React.FC<CarouselProps> = ({ options, images }) => {
       <button
         onClick={scrollPrev}
         type="button"
-        className="absolute bottom-1/2 ml-4  inline-flex translate-y-3 items-center rounded-full border border-transparent bg-gray-600/50 p-2 text-base font-medium text-white shadow-sm hover:bg-gray-700/50 sm:p-3"
+        className="absolute bottom-1/2 ml-4 inline-flex  translate-y-3 items-center rounded-full border border-transparent bg-gray-600/50 p-2 text-base font-medium text-white shadow-sm backdrop-blur-md hover:bg-gray-700/50 sm:p-3"
       >
         <ChevronLeftIcon className="h-2 w-2 sm:h-4 sm:w-4" aria-hidden="true" />
       </button>
@@ -58,7 +58,7 @@ const Carousel: React.FC<CarouselProps> = ({ options, images }) => {
       <button
         onClick={scrollNext}
         type="button"
-        className="xs:text-base absolute bottom-1/2 right-0  mr-4 inline-flex translate-y-3 items-center rounded-full border border-transparent bg-gray-600/50 p-2 font-medium text-white shadow-sm hover:bg-gray-700/50 sm:p-3"
+        className="xs:text-base absolute bottom-1/2 right-0 mr-4  inline-flex translate-y-3 items-center rounded-full border border-transparent bg-gray-600/50 p-2 font-medium text-white shadow-sm backdrop-blur-md hover:bg-gray-700/50 sm:p-3"
       >
         <ChevronRightIcon
           className="h-2 w-2 sm:h-4 sm:w-4"

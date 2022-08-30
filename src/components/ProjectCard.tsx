@@ -41,7 +41,7 @@ const ProjectCard: React.FC<Project> = ({
             ))}
           </div>
         </div>
-        <h2 className="text-md my-4 truncate text-xl font-medium text-slate-700">
+        <h2 className="xl:text-md my-4 truncate text-sm font-medium text-indigo-900/70">
           {description}
         </h2>
       </div>
