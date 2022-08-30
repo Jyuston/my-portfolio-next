@@ -101,7 +101,7 @@ const Home: NextPage<Props> = ({ projects }) => {
           </div>
         </div>
 
-        <div className="my-48 flex w-11/12 flex-col gap-8  xl:flex-row xl:justify-between">
+        <div className="my-48 flex w-11/12 flex-col gap-8 xl:flex-row xl:gap-32">
           <div>
             <h2 className="mb-6 font-mono text-4xl font-bold text-indigo-500">
               Occupation
@@ -110,12 +110,12 @@ const Home: NextPage<Props> = ({ projects }) => {
               <div>
                 <Image
                   alt="Company Logo"
-                  className="aspect-square rounded-md"
+                  className="aspect-square rounded-sm"
                   src={CSRLogo}
                   priority
                   layout="intrinsic"
-                  height={100}
-                  width={100}
+                  height={150}
+                  width={150}
                 />
               </div>
 
@@ -138,12 +138,12 @@ const Home: NextPage<Props> = ({ projects }) => {
               <div>
                 <Image
                   alt="University Logo"
-                  className="aspect-square rounded-md"
+                  className="aspect-square rounded-sm"
                   src={UTSLogo}
                   priority
                   layout="intrinsic"
-                  width={100}
-                  height={100}
+                  width={150}
+                  height={150}
                 />
               </div>
               <div>
