@@ -1,8 +1,10 @@
 import { Item } from "./MenuDropdown";
 import { allProjects } from "contentlayer/generated";
+import { MailIcon } from "@heroicons/react/solid";
 import MenuDropdown from "./MenuDropdown";
 import MenuButton from "./MenuButton";
 import Link from "next/link";
+import classNames from "src/utils/classNames";
 
 const Header: React.FC = () => {
   const dropdownItems = allProjects.map<Item>(
@@ -24,6 +26,9 @@ const Header: React.FC = () => {
 
         <div className="flex flex-row gap-4 py-4">
           <MenuButton url="/">Home</MenuButton>
+          <MenuButton url="mailto:justinyuen2000@hotmail.com">
+            Contact
+          </MenuButton>
           <MenuDropdown dropdownItems={dropdownItems}>Projects</MenuDropdown>
         </div>
       </div>
