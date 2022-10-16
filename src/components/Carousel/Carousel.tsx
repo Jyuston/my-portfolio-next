@@ -28,11 +28,12 @@ const Carousel: React.FC<CarouselProps> = ({ options, images }) => {
         <div className="flex items-center">
           {images.map((image) => (
             <div
-              className="relative ml-2 shrink-0 basis-full rounded-sm hover:cursor-grab active:cursor-grabbing md:my-4 md:ml-4 md:basis-4/5"
+              className="relative ml-2 shrink-0 basis-full hover:cursor-grab active:cursor-grabbing md:my-4 md:ml-4 md:basis-4/5"
               key={image.src}
             >
               <Image
                 alt="Carousel Image"
+                className="rounded-md"
                 priority
                 style={{ aspectRatio: `${16}/${9}` }}
                 src={image.src}
