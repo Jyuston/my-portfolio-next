@@ -50,19 +50,13 @@ const ProjectPage: NextPage<ProjectPageProps> = ({ project }) => {
         <title>Justin Yuen - Projects</title>
       </Head>
 
-      <Link href="/">
-        <a className="text-md text-left font-bold uppercase text-gray-500 hover:cursor-pointer hover:text-gray-700">
-          Home
-        </a>
-      </Link>
-
       <div className="xl:w-10/12">
         {project.images && project.images.length > 0 && (
           <Carousel images={project.images} />
         )}
       </div>
 
-      <div className="flex flex-col gap-3 rounded-lg bg-slate-50/80 p-8 drop-shadow-xl marker:mb-6 md:px-8 xl:w-10/12">
+      <div className="flex flex-col gap-3 rounded-lg bg-slate-50/80 p-10 drop-shadow-xl marker:mb-6 md:px-8 xl:w-10/12">
         <Transition
           show={true}
           appear={true}
@@ -70,33 +64,34 @@ const ProjectPage: NextPage<ProjectPageProps> = ({ project }) => {
           enterFrom="translate-y-5 opacity-0"
           enterTo="opacity-100"
         >
-          <div className="mb-4">
-            <h1 className="mb-8 text-4xl font-bold  md:text-5xl">
-              {project.title}
-            </h1>
-            <time
-              dateTime={project.date}
-              className="text-md my-8 font-medium text-slate-600"
-            >
-              {format(parseISO(project.date), "LLLL d, yyyy")}
-            </time>
-          </div>
+          <div className="ml-2 md:ml-4">
+            <div>
+              <h1 className="mb-4 text-4xl font-bold  md:text-5xl">
+                {project.title}
+              </h1>
+              <time
+                dateTime={project.date}
+                className="text-md my-8 font-medium text-slate-600"
+              >
+                {format(parseISO(project.date), "LLLL d, yyyy")}
+              </time>
+            </div>
 
-          <div className="my-5 mt-8 flex flex-row flex-wrap gap-2 md:w-3/4">
-            {project.tags.map((tag) => (
-              <Tag key={tag.name} tag={tag} />
-            ))}
-          </div>
+            <div className="my-5 mt-8 flex flex-row flex-wrap gap-2 md:w-3/4">
+              {project.tags.map((tag) => (
+                <Tag key={tag.name} tag={tag} />
+              ))}
+            </div>
 
-          <div className="my-5 flex flex-row flex-wrap gap-4 md:w-3/4">
-            {project.links.map((link) => (
-              <LinkComponent link={link} key={link.url} />
-            ))}
+            <div className="my-5 flex flex-row flex-wrap gap-4 md:w-3/4">
+              {project.links.map((link) => (
+                <LinkComponent link={link} key={link.url} />
+              ))}
+            </div>
           </div>
-
           <article>
             <div
-              className="prose mb-16 lg:prose-xl"
+              className="prose mt-16 mb-16 md:ml-8 lg:prose-xl"
               dangerouslySetInnerHTML={{ __html: project.body.html }}
             />
           </article>
@@ -131,7 +126,7 @@ const ProjectSelector: React.FC<ProjectSelectorProps> = ({
                 project._id === selectedProject._id
                   ? " text-indigo-700"
                   : "text-gray-600 hover:text-indigo-700",
-                "flex items-center rounded-md px-3 py-2 text-lg font-medium"
+                "flex items-center rounded-md py-2 text-lg font-medium"
               )}
             >
               <ChevronRightIcon
@@ -140,7 +135,7 @@ const ProjectSelector: React.FC<ProjectSelectorProps> = ({
                   "h-5 w-5"
                 )}
               />
-              <span className="truncate">{project.title}</span>
+              <span className="truncate pl-2">{project.title}</span>
             </a>
           </Link>
         );

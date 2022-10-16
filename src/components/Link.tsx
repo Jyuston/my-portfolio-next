@@ -8,7 +8,7 @@ type LinkProps = {
 const Link: React.FC<LinkProps> = ({ link }) => {
   return (
     <a
-      className="flex items-center gap-1 rounded-full bg-indigo-100 px-4 py-1 text-sm font-medium text-indigo-800 hover:cursor-pointer hover:underline"
+      className="flex items-center gap-1 rounded-full bg-blue-100 px-4 py-1 text-sm font-medium text-blue-800 hover:cursor-pointer hover:underline"
       target="_blank"
       rel="noreferrer"
       href={link.url}
@@ -19,7 +19,7 @@ const Link: React.FC<LinkProps> = ({ link }) => {
             width="20"
             height="20"
             viewBox="0 0 24 24"
-            className="fill-indigo-800"
+            className="fill-blue-800"
           >
             <path
               fillRule="evenodd"
@@ -33,7 +33,7 @@ const Link: React.FC<LinkProps> = ({ link }) => {
 
       {!link.github && (
         <div className="flex items-center gap-1">
-          <ExternalLinkIcon className="h-5 w-5 fill-indigo-600" />
+          <ExternalLinkIcon className="h-5 w-5 fill-blue-600" />
           <span>{link.url.replace(/^https?:\/\//, "")}</span>
         </div>
       )}
