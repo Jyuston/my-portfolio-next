@@ -81,7 +81,7 @@ const Home: NextPage<Props> = ({ projects }) => {
 
         <div>
           <div className="my-16 flex flex-col md:my-48 md:max-w-2xl">
-            <h2 className="mb-2 flex  font-mono text-3xl font-bold text-indigo-500 md:text-5xl">
+            <h2 className="my-5 flex  font-mono text-3xl font-bold text-indigo-500 md:text-5xl">
               About
             </h2>
 
@@ -103,7 +103,7 @@ const Home: NextPage<Props> = ({ projects }) => {
 
         <div className="my-48 flex w-11/12 flex-col gap-8 xl:flex-row xl:gap-32">
           <div>
-            <h2 className="mb-6 font-mono text-3xl font-bold text-indigo-500 md:mb-8 md:text-4xl">
+            <h2 className="my-5 font-mono text-3xl font-bold text-indigo-500 md:mb-8 md:text-4xl">
               Occupation
             </h2>
             <div className="flex items-center gap-4">
@@ -132,7 +132,7 @@ const Home: NextPage<Props> = ({ projects }) => {
           </div>
 
           <div>
-            <h2 className="mb-6 font-mono text-3xl font-bold text-indigo-500 md:mb-8 md:text-4xl">
+            <h2 className="my-5 font-mono text-3xl font-bold text-indigo-500 md:mb-8 md:text-4xl">
               Education
             </h2>
             <div className="flex items-center gap-4">
@@ -160,7 +160,7 @@ const Home: NextPage<Props> = ({ projects }) => {
           </div>
         </div>
 
-        <h2 className="mb-6 flex font-mono text-3xl font-bold text-indigo-500 md:text-5xl">
+        <h2 className="my-6 flex font-mono text-4xl font-bold text-indigo-500 md:text-5xl">
           Projects
         </h2>
 

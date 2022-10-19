@@ -6,11 +6,12 @@ tags:
   - name: Angular
   - name: .NET
   - name: AWS
+  - name: SAP
   - name: Cypress
   - name: MSTest
   - name: Github Actions
   - name: Octopus Deploy
-  - name: SAP
+
 links:
   - url: https://www.csrconnect.com.au
     github: false
