@@ -1,16 +1,18 @@
-import type { GetStaticProps, NextPage } from "next";
-import Image from "next/image";
-import Head from "next/head";
-import { compareDesc } from "date-fns";
-import { allProjects, Project } from "contentlayer/generated";
-import ProjectCard from "src/components/ProjectCard";
 import { Transition } from "@headlessui/react";
+import { allProjects, Project } from "contentlayer/generated";
+import { compareDesc } from "date-fns";
+import type { GetStaticProps, NextPage } from "next";
+import Head from "next/head";
+import Image from "next/image";
 import GithubIcon from "src/components/Icons/GithubIcon";
 import LinkedInIcon from "src/components/Icons/LinkedInIcon";
+import ProjectCard from "src/components/ProjectCard";
 
+import { useState } from "react";
 import CSRLogo from "../../public/images/icons/csr-logo.jpg";
 import UTSLogo from "../../public/images/icons/uts-logo.jpg";
 import Laptop from "../../public/images/Laptop.png";
+import Peace from "../../public/images/PeaceCropped.png";
 
 type Props = {
   projects: Project[];
@@ -25,6 +27,9 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
 };
 
 const Home: NextPage<Props> = ({ projects }) => {
+  let [alternateImage, setAlternateImage] = useState(false);
+  let [isShowing, setIsShowing] = useState(true);
+
   return (
     <>
       <Head>
@@ -66,16 +71,35 @@ const Home: NextPage<Props> = ({ projects }) => {
             </div>
           </Transition>
 
-          <div className="m-auto w-60 drop-shadow-md md:m-0 md:w-72 xl:mr-40 xl:w-auto">
-            <Image
-              alt="Picture of Justin Memoji"
-              className=" aspect-square"
-              priority
-              src={Laptop}
-              layout="intrinsic"
-              height={400}
-              width={400}
-            />
+          <div className="m-auto min-h-[300px] w-60 drop-shadow-md hover:cursor-pointer md:m-0 md:min-h-[400px] md:w-72 xl:mr-40 xl:w-auto">
+            <Transition
+              show={isShowing}
+              enter="transform transition duration-[400ms]"
+              enterFrom="opacity-0 scale-50"
+              enterTo="opacity-100 rotate-0 scale-100"
+              leave="transform duration-200 transition ease-in-out"
+              leaveFrom="opacity-100 rotate-0 scale-100 "
+              leaveTo="opacity-0 scale-50"
+              afterLeave={() => {
+                setAlternateImage(!alternateImage);
+                setIsShowing(true);
+              }}
+              unmount={false}
+              appear={true}
+            >
+              <Image
+                alt="Picture of Justin Memoji"
+                className=" aspect-square"
+                priority
+                src={alternateImage ? Peace : Laptop}
+                layout="intrinsic"
+                height={400}
+                width={400}
+                onClick={() => {
+                  setIsShowing(false);
+                }}
+              />
+            </Transition>
           </div>
         </div>
 
