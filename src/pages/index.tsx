@@ -65,7 +65,7 @@ const Home: NextPage<Props> = ({ projects }) => {
                 from Sydney, Australia.
               </h3>
 
-              <div className="inline-flex flex-col justify-start gap-2 rounded-md sm:flex-row md:mb-7 md:gap-4">
+              <div className="inline-flex flex-col justify-start gap-2 rounded-md sm:flex-row md:mb-7">
                 <div className="flex flex-row gap-2">
                   <GithubIcon />
                   <LinkedInIcon />
