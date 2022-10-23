@@ -1,5 +1,5 @@
 ---
-title: Porfolio Website
+title: Portfolio Website
 date: 2021-12-24
 description: A portfolio for all of my work.
 tags:
