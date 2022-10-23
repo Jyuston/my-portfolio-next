@@ -10,8 +10,8 @@ const LinkedInIcon: React.FC = () => {
       <IconWrapper bgColour="bg-blue-500">
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          width="18"
-          height="18"
+          width="15"
+          height="15"
           viewBox="0 0 24 24"
           className=" transform fill-slate-200 text-opacity-50 transition duration-200 hover:cursor-pointer "
         >

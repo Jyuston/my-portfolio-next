@@ -13,6 +13,7 @@ import CSRLogo from "../../public/images/icons/csr-logo.jpg";
 import UTSLogo from "../../public/images/icons/uts-logo.jpg";
 import Laptop from "../../public/images/Laptop.png";
 import Peace from "../../public/images/PeaceCropped.png";
+import ResumeIcon from "src/components/Icons/ResumeIcon";
 
 type Props = {
   projects: Project[];
@@ -65,8 +66,13 @@ const Home: NextPage<Props> = ({ projects }) => {
               </h3>
 
               <div className="inline-flex flex-col justify-start gap-2 rounded-md sm:flex-row md:mb-7 md:gap-4">
-                <GithubIcon />
-                <LinkedInIcon />
+                <div className="flex flex-row gap-2">
+                  <GithubIcon />
+                  <LinkedInIcon />
+                </div>
+                <div className="inline-flex">
+                  <ResumeIcon />
+                </div>
               </div>
             </div>
           </Transition>
@@ -81,7 +87,7 @@ const Home: NextPage<Props> = ({ projects }) => {
               leaveFrom="opacity-100 rotate-0 scale-100 "
               leaveTo="opacity-0 scale-50"
               afterLeave={() => {
-                setAlternateImage(!alternateImage);
+                setAlternateImage((altImage) => !altImage);
                 setIsShowing(true);
               }}
               unmount={false}
