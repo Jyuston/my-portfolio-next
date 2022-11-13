@@ -50,7 +50,7 @@ const Home: NextPage<Props> = ({ projects }) => {
               <h1 className="my-5 font-mono text-4xl font-bold text-indigo-500 dark:text-indigo-400 md:text-5xl ">
                 Welcome
               </h1>
-              <h2 className=" mb-4 text-3xl font-medium text-gray-500 dark:text-gray-300 md:text-5xl">
+              <h2 className=" mb-4 text-3xl font-medium text-gray-500 dark:text-gray-100 md:text-5xl">
                 My name is Justin Yuen.
               </h2>
 
