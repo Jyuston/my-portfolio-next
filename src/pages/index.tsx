@@ -95,7 +95,7 @@ const Home: NextPage<Props> = ({ projects }) => {
             >
               <Image
                 alt="Picture of Justin Memoji"
-                className=" aspect-square"
+                className="aspect-square transition duration-300 ease-in-out will-change-transform hover:scale-110"
                 priority
                 src={alternateImage ? Peace : Laptop}
                 layout="intrinsic"
