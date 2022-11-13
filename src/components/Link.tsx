@@ -33,7 +33,7 @@ const Link: React.FC<LinkProps> = ({ link }) => {
 
       {!link.github && (
         <div className="flex items-center gap-1">
-          <ExternalLinkIcon className="h-5 w-5 fill-blue-600" />
+          <ExternalLinkIcon className="h-5 w-5 fill-blue-600 dark:fill-slate-200" />
           <span>{link.url.replace(/^https?:\/\//, "")}</span>
         </div>
       )}
