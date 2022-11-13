@@ -25,15 +25,19 @@ const MenuDropdown: React.FC<MenuDropdownProps> = ({
         <>
           <Popover.Button
             className={classNames(
-              open ? "text-gray-600" : "text-gray-500",
-              "group inline-flex items-center rounded-sm text-lg font-medium hover:text-gray-600 focus:outline-none  focus:ring-gray-400"
+              open
+                ? "text-gray-600 dark:text-indigo-400"
+                : "text-gray-500 dark:text-gray-200",
+              "group inline-flex items-center rounded-sm text-lg font-medium hover:text-gray-600 focus:outline-none  focus:ring-gray-400  dark:hover:text-indigo-400"
             )}
           >
             <span>{children}</span>
             <ChevronDownIcon
               className={classNames(
-                open ? "text-gray-600" : "text-gray-400",
-                "h-5 w-5 group-hover:text-gray-500 "
+                open
+                  ? "text-gray-600dark:text-indigo-400"
+                  : "text-gray-400 dark:text-gray-200",
+                "h-5 w-5 group-hover:text-gray-500 dark:hover:text-indigo-400"
               )}
               aria-hidden="true"
             />
@@ -50,18 +54,18 @@ const MenuDropdown: React.FC<MenuDropdownProps> = ({
           >
             <Popover.Panel className="absolute right-0 z-10 mt-2 w-screen max-w-xs translate-x-[50px]  px-2 sm:px-0 md:translate-x-0">
               {({ close }) => (
-                <div className="overflow-hidden rounded-md shadow-lg ring-1 ring-black ring-opacity-5 ">
-                  <div className="relative grid gap-3 bg-white px-5 py-6 sm:gap-8 sm:p-4">
+                <div className="overflow-hidden rounded-md shadow-lg ring-1 ring-gray-500 ring-opacity-5 ">
+                  <div className="relative grid gap-3 bg-white px-5 py-6 dark:bg-slate-800 sm:gap-8 sm:p-4">
                     {dropdownItems.map((item) => (
                       <Link href={item.url} key={item.title}>
                         <a
-                          className="-m-3 block rounded-md p-3 transition duration-150 ease-in-out hover:bg-indigo-100"
+                          className="-m-3 block rounded-md p-3 transition duration-150 ease-in-out hover:bg-indigo-200 dark:hover:bg-gray-900"
                           onClick={() => close()}
                         >
-                          <p className="text-base font-medium text-gray-900">
+                          <p className="text-base font-medium text-gray-700 dark:text-gray-200">
                             {item.title}
                           </p>
-                          <p className="mt-1 text-sm text-gray-500">
+                          <p className="mt-1 text-sm text-gray-500 dark:text-gray-300">
                             {item.description}
                           </p>
                         </a>

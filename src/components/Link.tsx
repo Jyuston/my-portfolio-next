@@ -8,7 +8,7 @@ type LinkProps = {
 const Link: React.FC<LinkProps> = ({ link }) => {
   return (
     <a
-      className="flex items-center gap-1 rounded-full bg-blue-100 px-4 py-1 text-sm font-medium text-blue-800 hover:cursor-pointer hover:underline"
+      className="flex items-center gap-1 rounded-full bg-blue-100 px-4 py-1 text-sm font-medium text-blue-800 hover:cursor-pointer hover:underline dark:bg-blue-600 dark:text-slate-200"
       target="_blank"
       rel="noreferrer"
       href={link.url}
@@ -19,7 +19,7 @@ const Link: React.FC<LinkProps> = ({ link }) => {
             width="20"
             height="20"
             viewBox="0 0 24 24"
-            className="fill-blue-800"
+            className="fill-blue-800 dark:fill-slate-200"
           >
             <path
               fillRule="evenodd"

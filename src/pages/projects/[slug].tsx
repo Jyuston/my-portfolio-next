@@ -56,7 +56,7 @@ const ProjectPage: NextPage<ProjectPageProps> = ({ project }) => {
         )}
       </div>
 
-      <div className="flex flex-col gap-3 rounded-lg bg-slate-50/80 p-10 drop-shadow-xl marker:mb-6 md:px-8 xl:w-10/12">
+      <div className="flex flex-col gap-3 rounded-lg bg-slate-50/80 p-10 drop-shadow-xl transition duration-300 marker:mb-6 dark:bg-slate-800/70 md:px-8 xl:w-10/12">
         <Transition
           show={true}
           appear={true}
@@ -66,12 +66,12 @@ const ProjectPage: NextPage<ProjectPageProps> = ({ project }) => {
         >
           <div className="ml-2 md:ml-4">
             <div>
-              <h1 className="mb-4 text-4xl font-bold  md:text-5xl">
+              <h1 className="mb-4 text-4xl font-bold dark:text-gray-300 md:text-5xl">
                 {project.title}
               </h1>
               <time
                 dateTime={project.date}
-                className="text-md my-8 font-medium text-slate-600"
+                className="text-md my-8 font-medium text-slate-600 dark:text-gray-300"
               >
                 {format(parseISO(project.date), "LLLL d, yyyy")}
               </time>
@@ -91,7 +91,7 @@ const ProjectPage: NextPage<ProjectPageProps> = ({ project }) => {
           </div>
           <article>
             <div
-              className="prose mt-16 mb-16 md:ml-8 lg:prose-xl"
+              className="prose mt-16 mb-16 dark:prose-invert md:ml-8 lg:prose-xl"
               dangerouslySetInnerHTML={{ __html: project.body.html }}
             />
           </article>
@@ -124,8 +124,8 @@ const ProjectSelector: React.FC<ProjectSelectorProps> = ({
               key={project._id}
               className={classNames(
                 project._id === selectedProject._id
-                  ? " text-indigo-700"
-                  : "text-gray-600 hover:text-indigo-700",
+                  ? " text-indigo-700 dark:text-indigo-400"
+                  : "text-gray-600 hover:text-indigo-700 dark:text-gray-300 dark:hover:text-indigo-400",
                 "flex items-center rounded-md py-2 text-lg font-medium"
               )}
             >

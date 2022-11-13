@@ -47,14 +47,14 @@ const Home: NextPage<Props> = ({ projects }) => {
             enterTo="opacity-100"
           >
             <div className="m-auto xl:text-left">
-              <h1 className="my-5 font-mono text-4xl font-bold text-indigo-500 md:text-5xl ">
+              <h1 className="my-5 font-mono text-4xl font-bold text-indigo-500 dark:text-indigo-400 md:text-5xl ">
                 Welcome
               </h1>
-              <h2 className=" mb-4 text-3xl font-medium text-gray-500 md:text-5xl">
+              <h2 className=" mb-4 text-3xl font-medium text-gray-500 dark:text-gray-300 md:text-5xl">
                 My name is Justin Yuen.
               </h2>
 
-              <h3 className="mb-8 text-3xl font-medium text-gray-500 md:mb-10 md:text-5xl">
+              <h3 className="mb-8 text-3xl font-medium text-gray-500 dark:text-gray-300 md:mb-10 md:text-5xl">
                 I&apos;m a
                 <div className="mx-4 inline-block -skew-y-1 bg-gradient-to-r from-pink-500 to-yellow-500 px-[1px] text-3xl text-slate-800 md:p-1 md:text-5xl">
                   <span className="inline-block skew-y-1">
@@ -111,20 +111,26 @@ const Home: NextPage<Props> = ({ projects }) => {
 
         <div>
           <div className="my-16 flex flex-col md:my-48 md:max-w-2xl">
-            <h2 className="my-5 flex  font-mono text-3xl font-bold text-indigo-500 md:text-5xl">
+            <h2 className="my-5 flex  font-mono text-3xl font-bold text-indigo-500 dark:text-indigo-400   md:text-5xl">
               About
             </h2>
 
-            <h2 className="prose prose-xl mb-3 text-gray-500 xl:prose-2xl">
+            <h2 className="prose prose-xl mb-3 text-gray-500 dark:text-gray-300 xl:prose-2xl">
               I&apos;m a highly motivated engineer with a passion for learning
               and understanding new concepts. I enjoy working out, travelling
               and spending time amongst friends and family.
             </h2>
-            <div className="prose prose-xl  text-gray-500 xl:prose-2xl">
+            <div className="dark-text-gray-300 prose  prose-xl text-gray-500 dark:text-gray-300 xl:prose-2xl">
               Career wise, I have an interest in{" "}
-              <span className="font-bold text-gray-600">Web Applications</span>,{" "}
-              <span className="font-bold text-gray-600">DevOps</span> &{" "}
-              <span className="font-bold text-gray-600">
+              <span className="font-bold text-gray-600 dark:text-gray-300">
+                Web Applications
+              </span>
+              ,{" "}
+              <span className="font-bold text-gray-600 dark:text-gray-300">
+                DevOps
+              </span>{" "}
+              &{" "}
+              <span className="font-bold text-gray-600 dark:text-gray-300">
                 Software Development 💖💻.
               </span>
             </div>
@@ -133,7 +139,7 @@ const Home: NextPage<Props> = ({ projects }) => {
 
         <div className="my-48 flex w-11/12 flex-col gap-8 xl:flex-row xl:gap-32">
           <div>
-            <h2 className="my-5 font-mono text-3xl font-bold text-indigo-500 md:mb-8 md:text-4xl">
+            <h2 className="my-5 font-mono text-3xl font-bold text-indigo-500 dark:text-indigo-400 md:mb-8 md:text-4xl">
               Occupation
             </h2>
             <div className="flex items-center gap-4">
@@ -150,19 +156,21 @@ const Home: NextPage<Props> = ({ projects }) => {
               </div>
 
               <div>
-                <div className="text-lg font-medium text-gray-500 md:text-xl">
+                <div className="text-lg font-medium text-gray-500 dark:text-gray-300 md:text-xl">
                   Quality Assurance & DevOps Engineer
                 </div>
-                <div className="text-lg font-bold text-rose-700/80">
+                <div className="text-lg font-bold text-rose-700/80 text-rose-500">
                   CSR Limited
                 </div>
-                <div className="text-lg text-gray-500">2021 - Present</div>
+                <div className="text-lg text-gray-500 dark:text-gray-300">
+                  2021 - Present
+                </div>
               </div>
             </div>
           </div>
 
           <div>
-            <h2 className="my-5 font-mono text-3xl font-bold text-indigo-500 md:mb-8 md:text-4xl">
+            <h2 className="my-5 font-mono text-3xl font-bold text-indigo-500 dark:text-indigo-400 md:mb-8 md:text-4xl">
               Education
             </h2>
             <div className="flex items-center gap-4">
@@ -178,19 +186,21 @@ const Home: NextPage<Props> = ({ projects }) => {
                 />
               </div>
               <div>
-                <div className=" text-lg font-medium text-gray-500 md:text-xl">
+                <div className=" text-lg font-medium text-gray-500 dark:text-gray-300 md:text-xl">
                   Bachelors of Information Technology
                 </div>
-                <div className="text-lg font-bold text-blue-700">
+                <div className="text-lg font-bold text-blue-700 dark:text-blue-500">
                   Univeristy of Technology Sydney
                 </div>
-                <div className="text-lg text-gray-500">2019 - 2021</div>
+                <div className="text-lg text-gray-500 dark:text-gray-300">
+                  2019 - 2021
+                </div>
               </div>
             </div>
           </div>
         </div>
 
-        <h2 className="my-6 flex font-mono text-4xl font-bold text-indigo-500 md:text-5xl">
+        <h2 className="my-6 flex font-mono text-4xl font-bold text-indigo-500 dark:text-indigo-400 md:text-5xl">
           Projects
         </h2>
 

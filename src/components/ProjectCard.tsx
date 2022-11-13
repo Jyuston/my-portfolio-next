@@ -24,14 +24,14 @@ const ProjectCard: React.FC<Project> = ({
         />
       </div>
 
-      <div className="grow bg-white/70 p-5 md:overflow-hidden">
+      <div className="grow bg-white/70 p-5 dark:bg-slate-800/70 md:overflow-hidden">
         <div className="flex flex-col items-start">
-          <h2 className="text-md text-2xl font-medium text-slate-700">
+          <h2 className="text-md text-2xl font-medium text-slate-700 dark:text-slate-200">
             {title}
           </h2>
           <time
             dateTime={date}
-            className="text-md pb-2 font-mono text-slate-800"
+            className="text-md pb-2 font-mono text-slate-800 dark:text-slate-300"
           >
             {format(parseISO(date), "LLLL yyyy")}
           </time>
@@ -41,7 +41,7 @@ const ProjectCard: React.FC<Project> = ({
             ))}
           </div>
         </div>
-        <h2 className="xl:text-md my-4 truncate text-sm font-medium text-indigo-900/70 md:text-base">
+        <h2 className="xl:text-md my-4 truncate text-sm font-medium text-slate-800 dark:text-slate-200 md:text-base">
           {description}
         </h2>
       </div>
