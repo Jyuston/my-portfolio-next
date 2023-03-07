@@ -11,6 +11,7 @@ import ProjectCard from "src/components/ProjectCard";
 import { useState } from "react";
 import CSRLogo from "../../public/images/icons/csr-logo.jpg";
 import UTSLogo from "../../public/images/icons/uts-logo.jpg";
+import WestpacLogo from "../../public/images/icons/westpac-logo.png";
 import Laptop from "../../public/images/Laptop.png";
 import Peace from "../../public/images/PeaceCropped.png";
 import ResumeIcon from "src/components/Icons/ResumeIcon";
@@ -58,7 +59,7 @@ const Home: NextPage<Props> = ({ projects }) => {
                 I&apos;m a
                 <div className="mx-4 inline-block -skew-y-1 bg-gradient-to-r from-pink-500 to-yellow-500 px-[1px] text-3xl text-slate-800 md:p-1 md:text-5xl">
                   <span className="inline-block skew-y-1">
-                    QA DevOps Engineer
+                    Junior Software Developer
                   </span>
                 </div>
                 <br />
@@ -138,10 +139,37 @@ const Home: NextPage<Props> = ({ projects }) => {
         </div>
 
         <div className="my-48 flex w-11/12 flex-col gap-8 xl:flex-row xl:gap-32">
-          <div>
+          <div className="flex flex-col gap-6">
             <h2 className="my-5 font-mono text-3xl font-bold text-indigo-500 dark:text-indigo-400 md:mb-8 md:text-4xl">
               Occupation
             </h2>
+
+            <div className="flex items-center gap-4">
+              <div>
+                <Image
+                  alt="Company Logo"
+                  className="aspect-square rounded-sm"
+                  src={WestpacLogo}
+                  priority
+                  layout="intrinsic"
+                  height={150}
+                  width={150}
+                />
+              </div>
+
+              <div>
+                <div className="text-lg font-medium text-gray-500 dark:text-gray-300 md:text-xl">
+                  Junior Full-Stack Software Engineer
+                </div>
+                <div className="text-lg font-bold text-rose-700/80 text-rose-500">
+                  Westpac Group
+                </div>
+                <div className="text-lg text-gray-500 dark:text-gray-300">
+                  2023 - Present
+                </div>
+              </div>
+            </div>
+
             <div className="flex items-center gap-4">
               <div>
                 <Image
@@ -163,13 +191,13 @@ const Home: NextPage<Props> = ({ projects }) => {
                   CSR Limited
                 </div>
                 <div className="text-lg text-gray-500 dark:text-gray-300">
-                  2021 - Present
+                  2021 - 2023
                 </div>
               </div>
             </div>
           </div>
 
-          <div>
+          <div className="flex flex-col gap-6">
             <h2 className="my-5 font-mono text-3xl font-bold text-indigo-500 dark:text-indigo-400 md:mb-8 md:text-4xl">
               Education
             </h2>
