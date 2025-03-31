@@ -59,7 +59,7 @@ const Home: NextPage<Props> = ({ projects }) => {
                 I&apos;m a
                 <div className="mx-4 inline-block -skew-y-1 bg-gradient-to-r from-pink-500 to-yellow-500 px-[1px] text-3xl text-slate-800 md:p-1 md:text-5xl">
                   <span className="inline-block skew-y-1">
-                    Junior Software Developer
+                    Software Developer
                   </span>
                 </div>
                 <br />
@@ -118,8 +118,8 @@ const Home: NextPage<Props> = ({ projects }) => {
 
             <h2 className="prose prose-xl mb-3 text-gray-500 dark:text-gray-300 xl:prose-2xl">
               I&apos;m a highly motivated engineer with a passion for learning
-              and understanding new concepts. I enjoy working out, travelling
-              and spending time amongst friends and family.
+              and understanding new concepts. I enjoy various sports, travelling
+              and spending time together friends and family.
             </h2>
             <div className="dark-text-gray-300 prose  prose-xl text-gray-500 dark:text-gray-300 xl:prose-2xl">
               Career wise, I have an interest in{" "}
@@ -159,7 +159,7 @@ const Home: NextPage<Props> = ({ projects }) => {
 
               <div>
                 <div className="text-lg font-medium text-gray-500 dark:text-gray-300 md:text-xl">
-                  Junior Full-Stack Software Engineer
+                  Software Engineer / Senior Systems Specialist
                 </div>
                 <div className="text-lg font-bold text-rose-700/80 text-rose-500">
                   Westpac Group
